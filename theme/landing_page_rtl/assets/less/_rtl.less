@@ -1,0 +1,30 @@
+.al_timeline {
+    &_block {
+        &:nth-child(even) {
+            .al_timeline {
+                &_content {
+                    float: left;
+                    &:after {
+                        border-right-color: transparent;
+                        border-left-color: @white;
+                        left: auto;
+                        right: -20px;
+                    }
+                }
+            }
+        }
+    }
+    &_content {
+        &:after {
+            border-right-color: @white;
+            border-left-color: transparent;
+            left: -20px;
+            right: auto;
+        }
+    }
+}
+
+.md-card .md-card-footer,
+.uk-accordion-content {
+    text-align: right;
+}

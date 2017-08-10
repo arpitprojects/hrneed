@@ -1,0 +1,228 @@
+body,html{
+    font-family: 'Roboto' ,'Lato' , sans-serif !important;
+    
+}   
+
+#card{
+    box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22), 0 25px 55px 0 rgba(0,0,0,0.21);
+    width:320px;
+    border-radius:2px;
+}
+
+.img-responisve{
+    max-width:100%;
+    display: block;
+
+}
+
+.login-icon-font-size{
+    font-size:2rem;
+}
+#m-logo{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+
+}
+#login-logo-text{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color:rgba(0,0,0,0.87);
+}
+.clearfix{
+    clear:both;
+    display:block;
+}
+.light-black{
+    color: rgba(0,0,0,0.87);
+}
+.light-grey{
+    color:#9e9e9e;
+}
+.light-light-grey{
+    color:#424a52;
+}
+.font-15{
+    font-size:15px!important;
+}.font-14{
+    font-size:15px!important;
+}.font-12{
+    font-size:12px!important;
+}
+.font-11{
+    font-size:11px!important;
+}
+
+
+.login-btn-pink{
+    background-color:#FF5A92;
+    color:#fff;
+}
+.pink-diff{
+    color: #e56a5a !important;
+}
+#check-box-login-page{
+    margin-left:24px;
+}
+.adjust-check-box{
+    margin-left:10px;
+}
+.login-page-a{
+    color: #00bcd4;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size:0.9rem;
+}
+.login-page-a:hover{
+    color: #00bcd4;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size:0.9rem;
+}
+.display-none{
+    display:none !important;
+}
+.circle-ele{
+    border-radius:50%;   
+}
+#logo-adjust{
+    position: relative;
+    top:14px;
+}
+.company-name{
+    font-size:1.8rem;
+}
+#side-border{
+    padding-right:10px;
+    border-right:1px solid #d5d7d9;
+    margin-left:13.5%;
+
+}
+.text-upper-web{
+    font-size:14px;
+    color:grey;
+}
+.text-margin-email{
+    margin-left:175px;
+}
+.overflow-auto{
+    overflow:auto !important;
+}
+/*modal styling */
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 380px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog{
+    left: -380px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog{
+    left: 0;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: -380px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+    border-radius: 0;
+    border: none;
+}
+
+.modal-header {
+    border-bottom-color: #EEEEEE;
+    background-color: #FAFAFA;
+}
+button#icon-btn{
+    padding:0!important;
+    margin:0!important;
+    background-color: transparent!important;
+    border: 0!important; 
+    cursor: pointer;
+}
+button#icon-btn1{
+    padding:0!important;
+    margin:0!important;
+    background-color: transparent!important;
+    border: 0!important; 
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+}
+#modal-help-header{
+    border-bottom:1px solid #e4e4e4 !important;
+}
+
+.md-card .md-card-head{
+    border:none !important;
+}
+
+#logo-image{
+    height:120px;
+    width:120px;
+}
+.red-back{
+    background-color:#F44336;
+    
+}
+.color-white{
+    color:white !important;
+}
+.color-black{
+    color:black !important;
+}
+#edit-button{
+    border-radius:50%;
+    height:50px;
+    width:50px;
+}
+#icon-adjust{
+    position: relative;
+    top: 15px;
+    left: 13px;
+}
+.uk-file-upload{
+    border:1px solid #e9e9e9;
+}
+#main-content-update-modal li{
+    margin-top:1%;
+}
+#list-content li{
+    margin-top:1%;
+}
