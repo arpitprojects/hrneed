@@ -35,11 +35,13 @@
         <link rel="stylesheet" href="../../assests/css/themes_combined.min.css" media="all"/>
         <link rel="stylesheet" href="../../assests/css/waves.min.css" media="all"/>
         <link rel="stylesheet" href="../../assests/css/modal.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/dropify.min.css" media="all"/>
         <!--End of All css-->
         <!--Custom Css-->
         <link rel="stylesheet" href="../../build/css/init.css" media="all"/>
         <link rel="stylesheet" href="../../build/css/grid.css" media="all"/>
         <link rel="stylesheet" href="../../build/css/main.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/media_queries.css" media="all"/>
         <!--End of the custom css-->
     </head>
     <body id="body" class="sidebar_main_open sidebar_main_swipe">
@@ -117,186 +119,285 @@
             </div>
         </aside><!-- main sidebar end -->
         <br /><br /><br/ ><br />
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4 overflow-auto" id="side-border">
-                    <hr />
-                    <div>
-                        <div class="md-card">
-                            <div class="md-card-head">
-                                <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
-                                    <button class="md-fab md-fab-wave" data-toggle="modal" data-target="#myModal1" href="javascript:void(0)"><i class="mdi mdi-border-color color-black"></i></button>
+        <div class="container for_scroll">
+            <div class="row for_scroll">
+                <div id="main_wrapper">
+                    <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4 overflow-auto" id="side-border">
+                        <hr />
+                        <div>
+                            <div class="md-card">
+                                <div class="md-card-head">
+                                    <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                        <button class="md-fab md-fab-wave" data-toggle="modal" data-target="#myModal1"><i class="mdi mdi-border-color color-black"></i></button>
+                                    </div>
+                                    <br /><br /><br />
+                                    <div class="uk-text-center">
+                                        <img class="md-card-head-avatar img-responsive" height="120" width="120" id="logo-image" src="http://placehold.it/500x500" alt=""/>
+                                    </div>
+                                    <center>
+                                        <p class="company-name light-grey">Company name</p>
+                                        <br />
+                                        <p class="company-website light-grey">www.yourwebsite.com</p>
+                                    </center>
                                 </div>
-                                <br /><br /><br />
-                                <div class="uk-text-center">
-                                    <img class="md-card-head-avatar img-responsive" height="120" width="120" id="logo-image" src="http://placehold.it/500x500" alt=""/>
-                                </div>
-                                <center>
-                                    <p class="company-name light-grey">Company name</p>
-                                    <br />
-                                    <p class="company-website light-grey">www.yourwebsite.com</p>
-                                </center>
+                                <div class="md-card-content">
+                                    <br /><br /><br /><br /><br /><br />
+                                    <ul class="md-list md-list-addon">
+                                        <li>
+                                            <div class="md-list-addon-element">
+                                                <i class="mdi mdi-account-outline mdi-24px"></i>
+                                            </div>
+                                            <div class="md-list-content">
 
+                                                <span class="uk-text-small uk-text-muted font-15">Contact person name </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="md-list-addon-element">
+                                                <i class="md-list-addon-icon mdi mdi-phone mdi-24px"></i>
+                                            </div>
+                                            <div class="md-list-content">
+
+                                                <span class="uk-text-small uk-text-muted font-15">Phone Number</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="md-list-addon-element">
+                                                <i class="md-list-addon-icon mdi mdi-email-open-outline"></i>
+                                            </div>
+                                            <div class="md-list-content">
+
+                                                <span class="uk-text-small uk-text-muted font-15">name@yourwebsite.com</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="md-list-addon-element">
+                                                <i class="md-list-addon-icon mdi mdi-home"></i>
+                                            </div>
+                                            <div class="md-list-content">
+                                                <ul id="list-content">
+                                                    <li>
+                                                        <span class="uk-text-small uk-text-muted font-15">Company Address</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="uk-text-small uk-text-muted font-13">City</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="uk-text-small uk-text-muted font-13">State</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
 
                             </div>
-                            <div class="md-card-content">
-                                <br /><br /><br /><br /><br /><br />
-                                <ul class="md-list md-list-addon">
-                                    <li>
-                                        <div class="md-list-addon-element">
-                                            <i class="mdi mdi-account-outline mdi-24px"></i>
-                                        </div>
-                                        <div class="md-list-content">
-
-                                            <span class="uk-text-small uk-text-muted font-15">Contact person name </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="md-list-addon-element">
-                                            <i class="md-list-addon-icon mdi mdi-phone mdi-24px"></i>
-                                        </div>
-                                        <div class="md-list-content">
-
-                                            <span class="uk-text-small uk-text-muted font-15">Phone Number</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="md-list-addon-element">
-                                            <i class="md-list-addon-icon mdi mdi-email-open-outline"></i>
-                                        </div>
-                                        <div class="md-list-content">
-
-                                            <span class="uk-text-small uk-text-muted font-15">name@yourwebsite.com</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="md-list-addon-element">
-                                            <i class="md-list-addon-icon mdi mdi-home"></i>
-                                        </div>
-                                        <div class="md-list-content">
-                                            <ul id="list-content">
-                                                <li>
-                                                    <span class="uk-text-small uk-text-muted font-15">Company Address</span>
-                                                </li>
-                                                <li>
-                                                    <span class="uk-text-small uk-text-muted font-13">City</span>
-                                                </li>
-                                                <li>
-                                                    <span class="uk-text-small uk-text-muted font-13">State</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
                         </div>
+                        <br />
                     </div>
-                    <br />
-                </div>
-                <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6 overflow-auto" id="companysettings-second-col">
-                    <hr />
-                    <div class="md-card-head-menu pull-right display-none" data-uk-dropdown="{pos:'bottom-right'}">
-                        <button class="md-fab md-fab-wave" data-toggle="modal" data-target="#myModal3" href="javascript:void(0)"><i class="mdi mdi-border-color color-black"></i></button>
+                    <div class="col-xs-10 col-sm-10 col-md-5 col-lg-5 overflow-auto" id="companysettings-second-col">
+                        <hr />
+                        <div class="md-card-head-menu pull-right" data-uk-dropdown="{pos:'bottom-right'}">
+                            <button class="md-fab md-fab-wave" data-toggle="modal" data-target="#myModal3"><i class="mdi mdi-border-color color-black"></i></button>
+                        </div>
+                        <div class="upper-text">
+                            <span class="text-upper-web pull-left">Add your organization's details, define Super Administrator, personalise using your company logo and create other company related settings.</span>
+                            <span class="pull-right"></span>
+                            <span class="clearfix"></span>
+                        </div>
+                        <hr />
+                        <br />
+                        <ul class="md-list">
+                            <li>
+                                <div class="md-list-content">
+                                    <span class="md-list-heading">Super Administrator</span>
+                                    <br />
+
+                                    <span class="pink-diff pull-left uk-text-medium uk-text-muted">Email :</span><span class="text-margin-email uk-text-small">name@yourcompany.com</span>
+                                    <span class="clearfix"></span>
+                                    <br/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="md-list-content">
+                                    <span class="md-list-heading">Locale settings</span>
+                                    <br />
+
+                                    <span class="pull-left uk-text-medium uk-text-muted"> Current Locale:</span><span class="text-margin-email uk-text-small">India</span>
+                                    <span class="clearfix"></span>
+                                    <br />
+                                    <span class="pull-left uk-text-medium uk-text-muted"> Time Zone:</span><span class="text-margin-email uk-text-small">Indian Standard Time(Asia/India)</span>
+                                    <span class="clearfix"></span>
+                                    <br/> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="md-list-content">
+                                    <span class="md-list-heading">Display Settings</span>
+                                    <br />
+
+                                    <span class="pull-left uk-text-medium uk-text-muted"> Name To be displayed:</span><span class="text-margin-email uk-text-small">Last Name</span>
+                                    <span class="clearfix"></span>
+                                    <br />
+                                    <span class="pull-left uk-text-medium uk-text-muted">Date Format:</span><span class="text-margin-email uk-text-small">dd-mm-yyy</span>
+                                    <span class="clearfix"></span>
+                                    <br/> 
+                                    <span class="pull-left uk-text-medium uk-text-muted">Time Format:</span><span class="text-margin-email uk-text-small">12-Hour</span>
+                                    <span class="clearfix"></span>
+                                    <br/> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="md-list-content">
+                                    <span class="md-list-heading">Locale settings</span>
+                                    <br />
+
+                                    <span class="pull-left uk-text-medium uk-text-muted"> Current Locale:</span><span class="text-margin-email uk-text-small">India</span>
+                                    <span class="clearfix"></span>
+                                    <br />
+                                    <span class="pull-left uk-text-medium uk-text-muted"> Time Zone:</span><span class="text-margin-email uk-text-small">Indian Standard Time(Asia/India)</span>
+                                    <span class="clearfix"></span>
+                                    <br/> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="md-list-content">
+                                    <span class="md-list-heading">Profile Photo Settings</span>
+                                    <br />
+
+                                    <span class="pull-left uk-text-medium uk-text-muted"> Owner:</span><span class="text-margin-email uk-text-small">Employee</span>
+                                    <span class="clearfix"></span>
+                                    <br/> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="md-list-content">
+                                    <span class="md-list-heading">Chat settings</span>
+                                    <br />
+
+                                    <span class="pull-left uk-text-medium uk-text-muted"> Chat:</span><span class="text-margin-email uk-text-small">Enable</span>
+                                    <span class="clearfix"></span>
+                                    <br/> 
+                                </div>
+                            </li>
+                        </ul>
+                        <br /><br />
+                        <br /><br />
                     </div>
-                    <div class="upper-text">
-                        <span class="text-upper-web pull-left">Add your organization's details, define Super Administrator, personalise using your company logo and create other company related settings.</span>
-                        <span class="pull-right"></span>
-                        <span class="clearfix"></span>
-                    </div>
-                    <hr />
-                    <br />
-                    <ul class="md-list">
-                        <li>
-                            <div class="md-list-content">
-                                <span class="md-list-heading">Super Administrator</span>
-                                <br />
-
-                                <span class="pink-diff pull-left uk-text-medium uk-text-muted">Email :</span><span class="text-margin-email uk-text-small">name@yourcompany.com</span>
-                                <span class="clearfix"></span>
-                                <br/>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="md-list-content">
-                                <span class="md-list-heading">Locale settings</span>
-                                <br />
-
-                                <span class="pull-left uk-text-medium uk-text-muted"> Current Locale:</span><span class="text-margin-email uk-text-small">India</span>
-                                <span class="clearfix"></span>
-                                <br />
-                                <span class="pull-left uk-text-medium uk-text-muted"> Time Zone:</span><span class="text-margin-email uk-text-small">Indian Standard Time(Asia/India)</span>
-                                <span class="clearfix"></span>
-                                <br/> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="md-list-content">
-                                <span class="md-list-heading">Display Settings</span>
-                                <br />
-
-                                <span class="pull-left uk-text-medium uk-text-muted"> Name To be displayed:</span><span class="text-margin-email uk-text-small">Last Name</span>
-                                <span class="clearfix"></span>
-                                <br />
-                                <span class="pull-left uk-text-medium uk-text-muted">Date Format:</span><span class="text-margin-email uk-text-small">dd-mm-yyy</span>
-                                <span class="clearfix"></span>
-                                <br/> 
-                                <span class="pull-left uk-text-medium uk-text-muted">Time Format:</span><span class="text-margin-email uk-text-small">12-Hour</span>
-                                <span class="clearfix"></span>
-                                <br/> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="md-list-content">
-                                <span class="md-list-heading">Locale settings</span>
-                                <br />
-
-                                <span class="pull-left uk-text-medium uk-text-muted"> Current Locale:</span><span class="text-margin-email uk-text-small">India</span>
-                                <span class="clearfix"></span>
-                                <br />
-                                <span class="pull-left uk-text-medium uk-text-muted"> Time Zone:</span><span class="text-margin-email uk-text-small">Indian Standard Time(Asia/India)</span>
-                                <span class="clearfix"></span>
-                                <br/> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="md-list-content">
-                                <span class="md-list-heading">Profile Photo Settings</span>
-                                <br />
-
-                                <span class="pull-left uk-text-medium uk-text-muted"> Owner:</span><span class="text-margin-email uk-text-small">Employee</span>
-                                <span class="clearfix"></span>
-                                <br/> 
-                            </div>
-                        </li>
-                        <li>
-                            <div class="md-list-content">
-                                <span class="md-list-heading">Chat settings</span>
-                                <br />
-
-                                <span class="pull-left uk-text-medium uk-text-muted"> Chat:</span><span class="text-margin-email uk-text-small">Enable</span>
-                                <span class="clearfix"></span>
-                                <br/> 
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
         <!--Modal markups-->
         <div class="modal right fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog" role="document" id="custom-modal-600">
                 <div class="modal-content">
                     <br /><hr/><!--To avoid upper margin-->
                     <div class="modal-header" id="modal-help-header">
                         <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
                         <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
                     </div>
-
                     <div class="modal-body">
-                        <p>
-
-                        </p>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="md-list-content">
+                                    <span class="md-list-heading font-weight-500">Super Administrator</span>
+                                    <br /><br />
+                                    <div class="uk-input-group">
+                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-email-outline login-icon-font-size"></i></span>
+                                        <label>Email</label>
+                                        <input type="text" class="md-input" />
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="md-list-content">
+                                    <span class="md-list-heading font-weight-500">Locale Settings</span>
+                                    <br /><br />
+                                    <div class="uk-input-group">
+                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-map-marker login-icon-font-size"></i></span>
+                                        <label>Current Location</label>
+                                        <input type="text" class="md-input" />
+                                    </div>
+                                    <br />
+                                    <div class="uk-input-group">
+                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-web login-icon-font-size"></i></span>
+                                        <label>Time Zone</label>
+                                        <input type="text" class="md-input" />
+                                    </div>
+                                </div>
+                                <br /><br />
+                                <div class="md-list-content">
+                                    <span class="md-list-heading font-weight-500">Display Settings</span>
+                                    <br /><br />
+                                    <div class="uk-input-group">
+                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-map-marker login-icon-font-size"></i></span>
+                                        <label>Name</label>
+                                        <input type="text" class="md-input" />
+                                    </div>
+                                    <br />
+                                    <select id="select_demo_5" data-md-selectize data-md-selectize-bottom data-uk-tooltip="{pos:'top'}" title="Select with tooltip">
+                                        <option value="">TimeZone</option>
+                                        <option value="a">dd-mm-yy</option>
+                                        <option value="b">mm-dd-yy</option>
+                                        <option value="c">yy-mm-dd</option>
+                                    </select>
+                                    <span class="uk-form-help-block font-weight-500 font-weight-500">TimeZone</span>
+                                    <br /><br />
+                                    <ul class="inline-block">
+                                        <li>  <p>
+                                            <input type="radio" name="radio_demo" id="radio_demo_1" data-md-icheck />
+                                            <label for="radio_demo_1" class="inline-label">12 Hour</label>
+                                            </p>
+                                        </li><li>
+                                        <p>
+                                            <input type="radio" name="radio_demo" id="radio_demo_2" data-md-icheck />
+                                            <label for="radio_demo_2" class="inline-label">24 Hour</label>
+                                        </p></li>
+                                        <span class="uk-form-help-block font-weight-500">TimeFormat</span>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="md-list-content">
+                                    <span class="md-list-heading font-weight-500 font-weight-500">Profile Photo Settings</span>
+                                    <br /><br />
+                                    <ul class="inline-block">
+                                        <li>  <p>
+                                            <input type="radio" name="radio_demo" id="radio_demo_1" data-md-icheck />
+                                            <label for="radio_demo_1" class="inline-label">Employee</label>
+                                            </p>
+                                        </li><li>
+                                        <p>
+                                            <input type="radio" name="radio_demo" id="radio_demo_2" data-md-icheck />
+                                            <label for="radio_demo_2" class="inline-label">Administrator</label>
+                                        </p></li>
+                                    </ul>
+                                </div>
+                                <br /><br/>
+                                <div class="md-list-content">
+                                    <span class="md-list-heading font-weight-500">Chat Settings</span>
+                                    <br /><br />
+                                    <ul class="inline-block">
+                                        <li>  <p>
+                                            <input type="radio" name="radio_demo" id="radio_demo_1" data-md-icheck />
+                                            <label for="radio_demo_1" class="inline-label">Enable</label>
+                                            </p>
+                                        </li><li>
+                                        <p>
+                                            <input type="radio" name="radio_demo" id="radio_demo_2" data-md-icheck />
+                                            <label for="radio_demo_2" class="inline-label">Disable</label>
+                                        </p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <center>
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-mini md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Modify Settings</a>
+                                </div>
+                            </center>
+                        </div>
                     </div>
 
                 </div><!-- modal-content -->
@@ -321,73 +422,95 @@
             </div><!-- modal-dialog -->
         </div><!-- modal -->
         <div class="modal right fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog" role="document" id="custom-modal-600">
                 <div class="modal-content">
                     <br /><hr/><!--To avoid upper margin-->
                     <div class="modal-header" id="modal-help-header">
                         <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
                         <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
                     </div>
-                    <div class="modal-body">
-                        <div>
-                            <div id="file_upload-drop" class="uk-file-upload">
-                                <p class="uk-text">Drop file to upload</p>
-                                <p class="uk-text-muted uk-text-small uk-margin-small-bottom">or</p>
-                                <a class="uk-form-file md-btn">choose file<input id="file_upload-select" type="file"></a>
-                            </div>
-                            <div id="file_upload-progressbar" class="uk-progress uk-hidden">
-                                <div class="uk-progress-bar" style="width:0">0%</div>
+                    <div class="modal-body" >
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="md-card">
+                                    <div class="md-card-content">
+                                        <input type="file" id="input-file-e" class="dropify" data-max-file-size="200K" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <ul id="main-content-update-modal">
-                            <li>
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black mdi mdi-domain login-icon-font-size"></i></span>
-                                    <label>Company Name</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                            </li>
-                            <li>
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black mdi mdi-web login-icon-font-size"></i></span>
-                                    <label>Website</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                            </li>
-                            <li>
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black mdi mdi-account login-icon-font-size"></i></span>
-                                    <label>Contact Person</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                            </li>
-                            <li>
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black mdi mdi-phone login-icon-font-size"></i></span>
-                                    <label>Contact Number</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                            </li>
-                            <li>
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black mdi mdi-email login-icon-font-size"></i></span>
-                                    <label>Contact Email</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                            </li>
-                            <li>
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black mdi mdi-home login-icon-font-size"></i></span>
-                                    <label>Address</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                            </li>
-                            <li>
+                        <br /><br />
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul id="main-content-update-modal">
+                                    <li>
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-domain login-icon-font-size"></i></span>
+                                            <label>Company Name</label>
+                                            <input type="text" class="md-input" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-web login-icon-font-size"></i></span>
+                                            <label>Website</label>
+                                            <input type="text" class="md-input" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-account login-icon-font-size"></i></span>
+                                            <label>Contact Person</label>
+                                            <input type="text" class="md-input" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-phone login-icon-font-size"></i></span>
+                                            <label>Contact Number</label>
+                                            <input type="text" class="md-input" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul id="main-content-update-modal">
+                                    <li>
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-email login-icon-font-size"></i></span>
+                                            <label>Contact Email</label>
+                                            <input type="text" class="md-input" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-home login-icon-font-size"></i></span>
+                                            <label>Address</label>
+                                            <input type="text" class="md-input" />
+                                        </div>
+                                    </li><li>
+                                    <div class="uk-input-group">
+                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-home login-icon-font-size"></i></span>
+                                        <label>City</label>
+                                        <input type="text" class="md-input" />
+                                    </div>
+                                    </li><li>
+                                    <div class="uk-input-group">
+                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-home login-icon-font-size"></i></span>
+                                        <label>State</label>
+                                        <input type="text" class="md-input" />
+                                    </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
                                 <div class="uk-margin-medium-top">
                                     <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-mini md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Modify Settings</a>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
 
                 </div><!-- modal-content -->
@@ -400,6 +523,7 @@
         <script src="../../assests/js/altair_admin_common.min.js"></script>
         <script src='../../assests/js/waves.min.js'></script>
         <script src="../../assests/js/modal.js"></script>
+        <script src="../../assests/js/dropify.min.js"></script>
         <script src="../../build/js/init.js"></script>
         <script src="../../build/js/build.js"></script>
     </body>
