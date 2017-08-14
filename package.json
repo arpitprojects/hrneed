@@ -9,6 +9,7 @@
   "author": "Arpit anand",
   "license": "MIT",
   "dependencies": {
+    "dragula": "^3.7.2",
     "izimodal": "^1.5.0"
   }
 }

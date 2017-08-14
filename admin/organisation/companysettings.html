@@ -1,138 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Hr Need</title>
-        <!--All meta tags-->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:title" content="HRIS"/>
-        <meta property="og:site_name" content="hris"/>
-        <meta property="og:url" content="http://" />
-        <meta property="og:description" content="Human Resources Management System"/>
-        <meta property="og:type" content="website"/>
-        <meta property="article:author" content="" />
-        <meta property="og:image" content="http://" />
-        <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" />
-        <meta name="mobile-web-app-capable" content="yes"/>
-        <!--All seo meta tags -->
-        <!--Link favicon used form ipl site-->
-        <link rel="shortcut icon" href="" type="image/x-icon">
-        <!--All icons-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-              rel="stylesheet">
-        <link href="../../assests/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
-        <!--End of the all icons-->
-        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
-        <!-- All css-->
-        <link rel="stylesheet" href="../../assests/css/uikit.almost-flat.min.css" media="all"/>
-        <link rel="stylesheet" href="../../assests/css/flags.min.css" media="all"/>
-        <link rel="stylesheet" href="../../assests/css/style_switcher.min.css" media="all"/>
-        <link rel="stylesheet" href="../../assests/css/main.min.css" media="all"/>
-        <link rel="stylesheet" href="../../assests/css/themes_combined.min.css" media="all"/>
-        <link rel="stylesheet" href="../../assests/css/waves.min.css" media="all"/>
-        <link rel="stylesheet" href="../../assests/css/modal.css" media="all"/>
-        <link rel="stylesheet" href="../../assests/css/dropify.min.css" media="all"/>
-        <!--End of All css-->
-        <!--Custom Css-->
-        <link rel="stylesheet" href="../../build/css/init.css" media="all"/>
-        <link rel="stylesheet" href="../../build/css/grid.css" media="all"/>
-        <link rel="stylesheet" href="../../build/css/main.css" media="all"/>
-        <link rel="stylesheet" href="../../build/css/media_queries.css" media="all"/>
-        <!--End of the custom css-->
-    </head>
-    <body id="body" class="sidebar_main_open sidebar_main_swipe">
-        <!-- main header -->
-        <header id="header_main">
-            <div class="header_main_content">
-                <nav class="uk-navbar">
-
-                    <!-- main sidebar switch -->
-                    <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
-                        <span class="sSwitchIcon"></span>
-                    </a>
-                    <!-- secondary sidebar switch -->
-                    <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
-                        <span class="sSwitchIcon"></span>
-                    </a> 
-                    <button class="pull-right md-wave" type="button" id="icon-btn1" data-toggle="modal" data-target="#myModal2">
-                        <i class="mdi mdi-24px mdi-help-circle-outline color-white"></i>
-                    </button>
-                </nav>
-            </div>
-            <div class="header_main_search_form">
-                <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
-                <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
-                    <input type="text" class="header_main_search_input" />
-                    <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
-                    <script type="text/autocomplete">
-                    <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
-                        {{~items}}
-                        <li data-value="{{ $item.value }}">
-                            <a href="{{ $item.url }}" class="needsclick">
-                                {{ $item.value }}<br>
-                                <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
-                        </a>
-                        </li>
-                        {{/items}}
-                        </ul>
-                    </script>
-                </form>
-            </div>
-        </header><!-- main header end -->
-        <!-- main sidebar -->
-        <aside id="sidebar_main">
-
-            <div class="sidebar_main_header">
-                <!--some element deleted by me-->
-                <center>
-                    <img src="../../build/img/m_logo.png" id="logo-adjust" alt="logo" height="60" width="60" class="circle-ele"  />
-                </center>
-            </div>
-
-            <div class="menu_section">
-                <ul>
-
-                    <li title="Organisation">
-                        <a href="javascript:void(0)">
-                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
-                            <span class="menu_title">Organisation</span>
-                        </a>
-                        <ul>
-                            <li><a href="javascript:void(0)" class="side-btn">Company Profile</a></li>
-                            <li><a href="javascript:void(0)">Departments</a></li>
-                            <li><a href="javascript:void(0)">Designations</a></li>
-                            <li><a href="javascript:void(0)">Locations</a></li>
-                            <li><a href="javascript:void(0)">Groups</a></li>
-                            <li><a href="javascript:void(0)">Domains</a></li>
-                            <li><a href="javascript:void(0)">Rebranding</a></li>
-                            <li><a href="javascript:void(0)">Pay period Settings</a></li>
-                            <li><a href="javascript:void(0)">Hoilday Calender</a></li>
-                        </ul>
-
-                    </li>
-
-                </ul>
-            </div>
-        </aside><!-- main sidebar end -->
-        <br /><br /><br/ ><br />
-        <div class="container for_scroll">
+ <div class="container for_scroll">
             <div class="row for_scroll">
                 <div id="main_wrapper">
                     <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4 overflow-auto" id="side-border">
-                        <hr />
+
                         <div>
-                            <div class="md-card">
+                            <div class="md-card box-shadow-none background-color-eee">
                                 <div class="md-card-head">
                                     <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
-                                        <button class="md-fab md-fab-wave" data-toggle="modal" data-target="#myModal1"><i class="mdi mdi-border-color color-black"></i></button>
+                                        <button class="md-fab md-fab-wave no-btn" data-toggle="modal" data-target="#myModal1"><i class="icon-color mdi mdi-dots-horizontal color-black"></i></button>
                                     </div>
                                     <br /><br /><br />
                                     <div class="uk-text-center">
-                                        <img class="md-card-head-avatar img-responsive" height="120" width="120" id="logo-image" src="http://placehold.it/500x500" alt=""/>
+                                        <img class="md-card-head-avatar border-radius-0 img-responsive" height="120" width="120" id="logo-image" src="http://placehold.it/800x800" alt=""/>
                                     </div>
                                     <center>
                                         <p class="company-name light-grey">Company name</p>
@@ -145,11 +24,11 @@
                                     <ul class="md-list md-list-addon">
                                         <li>
                                             <div class="md-list-addon-element">
-                                                <i class="mdi mdi-account-outline mdi-24px"></i>
+                                                <i class="mdi mdi-account-outline mdi-24px icon-color"></i>
                                             </div>
                                             <div class="md-list-content">
 
-                                                <span class="uk-text-small uk-text-muted font-15">Contact person name </span>
+                                                <span class="uk-text-small uk-text-muted font-15 ">Contact person name </span>
                                             </div>
                                         </li>
                                         <li>
@@ -163,7 +42,7 @@
                                         </li>
                                         <li>
                                             <div class="md-list-addon-element">
-                                                <i class="md-list-addon-icon mdi mdi-email-open-outline"></i>
+                                                <i class="md-list-addon-icon mdi mdi-email-open-outline icon-color"></i>
                                             </div>
                                             <div class="md-list-content">
 
@@ -172,7 +51,7 @@
                                         </li>
                                         <li>
                                             <div class="md-list-addon-element">
-                                                <i class="md-list-addon-icon mdi mdi-home"></i>
+                                                <i class="md-list-addon-icon mdi mdi-home icon-color"></i>
                                             </div>
                                             <div class="md-list-content">
                                                 <ul id="list-content">
@@ -189,6 +68,15 @@
                                             </div>
                                         </li>
                                     </ul>
+                                    <hr/>
+                                    <ul class="">
+                                        <li>
+                                            <div class="md-list-content">
+                                                <span class="uk-text-small uk-text-justify uk-text-muted text-justify-add">Add your organization's details, define Super Administrator, personalise using your company logo and create other company related settings. </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <hr />
                                 </div>
 
                             </div>
@@ -196,22 +84,17 @@
                         <br />
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-5 col-lg-5 overflow-auto" id="companysettings-second-col">
-                        <hr />
+
                         <div class="md-card-head-menu pull-right" data-uk-dropdown="{pos:'bottom-right'}">
-                            <button class="md-fab md-fab-wave" data-toggle="modal" data-target="#myModal3"><i class="mdi mdi-border-color color-black"></i></button>
+                            <button class="md-fab md-fab-wave no-btn" data-toggle="modal" data-target="#myModal3"><i class="mdi mdi-dots-horizontal color-black icon-color"></i></button>
                         </div>
-                        <div class="upper-text">
-                            <span class="text-upper-web pull-left">Add your organization's details, define Super Administrator, personalise using your company logo and create other company related settings.</span>
-                            <span class="pull-right"></span>
-                            <span class="clearfix"></span>
-                        </div>
-                        <hr />
-                        <br />
+
                         <ul class="md-list">
+                            <br /><br /><br /><br />
                             <li>
                                 <div class="md-list-content">
-                                    <span class="md-list-heading">Super Administrator</span>
-                                    <br />
+                                    <span class="md-list-heading padding-bottom-6px">Super Administrator</span>
+
 
                                     <span class="pink-diff pull-left uk-text-medium uk-text-muted">Email :</span><span class="text-margin-email uk-text-small">name@yourcompany.com</span>
                                     <span class="clearfix"></span>
@@ -220,8 +103,8 @@
                             </li>
                             <li>
                                 <div class="md-list-content">
-                                    <span class="md-list-heading">Locale settings</span>
-                                    <br />
+                                    <span class="md-list-heading padding-bottom-6px">Locale settings</span>
+
 
                                     <span class="pull-left uk-text-medium uk-text-muted"> Current Locale:</span><span class="text-margin-email uk-text-small">India</span>
                                     <span class="clearfix"></span>
@@ -233,8 +116,8 @@
                             </li>
                             <li>
                                 <div class="md-list-content">
-                                    <span class="md-list-heading">Display Settings</span>
-                                    <br />
+                                    <span class="md-list-heading padding-bottom-6px">Display Settings</span>
+
 
                                     <span class="pull-left uk-text-medium uk-text-muted"> Name To be displayed:</span><span class="text-margin-email uk-text-small">Last Name</span>
                                     <span class="clearfix"></span>
@@ -249,8 +132,8 @@
                             </li>
                             <li>
                                 <div class="md-list-content">
-                                    <span class="md-list-heading">Locale settings</span>
-                                    <br />
+                                    <span class="md-list-heading padding-bottom-6px">Locale settings</span>
+
 
                                     <span class="pull-left uk-text-medium uk-text-muted"> Current Locale:</span><span class="text-margin-email uk-text-small">India</span>
                                     <span class="clearfix"></span>
@@ -262,8 +145,8 @@
                             </li>
                             <li>
                                 <div class="md-list-content">
-                                    <span class="md-list-heading">Profile Photo Settings</span>
-                                    <br />
+                                    <span class="md-list-heading padding-bottom-6px">Profile Photo Settings</span>
+
 
                                     <span class="pull-left uk-text-medium uk-text-muted"> Owner:</span><span class="text-margin-email uk-text-small">Employee</span>
                                     <span class="clearfix"></span>
@@ -272,17 +155,17 @@
                             </li>
                             <li>
                                 <div class="md-list-content">
-                                    <span class="md-list-heading">Chat settings</span>
-                                    <br />
+                                    <span class="md-list-heading padding-bottom-6px">Chat settings</span>
+
 
                                     <span class="pull-left uk-text-medium uk-text-muted"> Chat:</span><span class="text-margin-email uk-text-small">Enable</span>
                                     <span class="clearfix"></span>
                                     <br/> 
+                                    <hr/>
                                 </div>
                             </li>
                         </ul>
-                        <br /><br />
-                        <br /><br />
+
                     </div>
                 </div>
             </div>
@@ -303,7 +186,7 @@
                                     <span class="md-list-heading font-weight-500">Super Administrator</span>
                                     <br /><br />
                                     <div class="uk-input-group">
-                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-email-outline login-icon-font-size"></i></span>
+                                        <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-email-outline login-icon-font-size"></i></span>
                                         <label>Email</label>
                                         <input type="text" class="md-input" />
                                     </div>
@@ -313,13 +196,13 @@
                                     <span class="md-list-heading font-weight-500">Locale Settings</span>
                                     <br /><br />
                                     <div class="uk-input-group">
-                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-map-marker login-icon-font-size"></i></span>
+                                        <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-map-marker login-icon-font-size"></i></span>
                                         <label>Current Location</label>
                                         <input type="text" class="md-input" />
                                     </div>
                                     <br />
                                     <div class="uk-input-group">
-                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-web login-icon-font-size"></i></span>
+                                        <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-web login-icon-font-size"></i></span>
                                         <label>Time Zone</label>
                                         <input type="text" class="md-input" />
                                     </div>
@@ -329,7 +212,7 @@
                                     <span class="md-list-heading font-weight-500">Display Settings</span>
                                     <br /><br />
                                     <div class="uk-input-group">
-                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-map-marker login-icon-font-size"></i></span>
+                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-map-marker login-icon-font-size icon-color"></i></span>
                                         <label>Name</label>
                                         <input type="text" class="md-input" />
                                     </div>
@@ -340,7 +223,7 @@
                                         <option value="b">mm-dd-yy</option>
                                         <option value="c">yy-mm-dd</option>
                                     </select>
-                                    <span class="uk-form-help-block font-weight-500 font-weight-500">TimeZone</span>
+                                    <span class="uk-form-help-block font-weight-500 font-weight-500 icon-color">TimeZone</span>
                                     <br /><br />
                                     <ul class="inline-block">
                                         <li>  <p>
@@ -394,7 +277,7 @@
                         <div class="row">
                             <center>
                                 <div class="col-sm-6 col-sm-offset-3">
-                                    <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-mini md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Modify Settings</a>
+                                    <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Modify Settings</a>
                                 </div>
                             </center>
                         </div>
@@ -431,7 +314,7 @@
                     </div>
                     <div class="modal-body" >
                         <div class="row">
-                            <div class="col-sm-8 col-sm-offset-2">
+                            <div class="col-sm-6 col-sm-offset-4">
                                 <div class="md-card">
                                     <div class="md-card-content">
                                         <input type="file" id="input-file-e" class="dropify" data-max-file-size="200K" />
@@ -439,34 +322,33 @@
                                 </div>
                             </div>
                         </div>
-                        <br /><br />
                         <div class="row">
                             <div class="col-sm-6">
                                 <ul id="main-content-update-modal">
                                     <li>
                                         <div class="uk-input-group">
-                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-domain login-icon-font-size"></i></span>
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-domain login-icon-font-size icon-color"></i></span>
                                             <label>Company Name</label>
                                             <input type="text" class="md-input" />
                                         </div>
                                     </li>
                                     <li>
                                         <div class="uk-input-group">
-                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-web login-icon-font-size"></i></span>
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-web login-icon-font-size icon-color"></i></span>
                                             <label>Website</label>
                                             <input type="text" class="md-input" />
                                         </div>
                                     </li>
                                     <li>
                                         <div class="uk-input-group">
-                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-account login-icon-font-size"></i></span>
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-account login-icon-font-size icon-color"></i></span>
                                             <label>Contact Person</label>
                                             <input type="text" class="md-input" />
                                         </div>
                                     </li>
                                     <li>
                                         <div class="uk-input-group">
-                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-phone login-icon-font-size"></i></span>
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-phone login-icon-font-size icon-color"></i></span>
                                             <label>Contact Number</label>
                                             <input type="text" class="md-input" />
                                         </div>
@@ -477,26 +359,26 @@
                                 <ul id="main-content-update-modal">
                                     <li>
                                         <div class="uk-input-group">
-                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-email login-icon-font-size"></i></span>
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-email login-icon-font-size icon-color"></i></span>
                                             <label>Contact Email</label>
                                             <input type="text" class="md-input" />
                                         </div>
                                     </li>
                                     <li>
                                         <div class="uk-input-group">
-                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-home login-icon-font-size"></i></span>
+                                            <span class="uk-input-group-addon"><i class="light-black mdi mdi-home login-icon-font-size icon-color"></i></span>
                                             <label>Address</label>
                                             <input type="text" class="md-input" />
                                         </div>
                                     </li><li>
                                     <div class="uk-input-group">
-                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-home login-icon-font-size"></i></span>
+                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-city login-icon-font-size icon-color"></i></span>
                                         <label>City</label>
                                         <input type="text" class="md-input" />
                                     </div>
                                     </li><li>
                                     <div class="uk-input-group">
-                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-home login-icon-font-size"></i></span>
+                                        <span class="uk-input-group-addon"><i class="light-black mdi mdi-city login-icon-font-size icon-color"></i></span>
                                         <label>State</label>
                                         <input type="text" class="md-input" />
                                     </div>
@@ -507,7 +389,7 @@
                         <div class="row">
                             <div class="col-sm-6 col-sm-offset-3">
                                 <div class="uk-margin-medium-top">
-                                    <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-mini md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Modify Settings</a>
+                                    <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Modify Settings</a>
                                 </div>
                             </div>
                         </div>
@@ -516,15 +398,3 @@
                 </div><!-- modal-content -->
             </div><!-- modal-dialog -->
         </div><!-- modal -->
-
-        <!--End of modal markups of this page-->
-        <script src="../../assests/js/common.min.js"></script>
-        <script src="../../assests/js/uikit_custom.min.js"></script>
-        <script src="../../assests/js/altair_admin_common.min.js"></script>
-        <script src='../../assests/js/waves.min.js'></script>
-        <script src="../../assests/js/modal.js"></script>
-        <script src="../../assests/js/dropify.min.js"></script>
-        <script src="../../build/js/init.js"></script>
-        <script src="../../build/js/build.js"></script>
-    </body>
-</html>

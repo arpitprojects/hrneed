@@ -7,6 +7,9 @@ body,html{
 body{
     overflow-y: hidden;
 }
+.palete-color{
+    color:#1976d2!important;
+}
 
 #card{
     box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22), 0 25px 55px 0 rgba(0,0,0,0.21);
@@ -265,7 +268,7 @@ button#icon-btn1{
 
 #logo-image{
     height:120px;
-    width:120px;
+    width:285px;
 }
 .red-back{
     background-color:#F44336;
@@ -315,4 +318,83 @@ button#icon-btn1{
 }
 .font-weight-500{
     font-weight:500 !important;
+}
+.no-btn{
+    box-shadow: none!important;
+    background-color:transparent!important;
+}
+.box-shadow-none{
+    box-shadow:none !important;
+}
+.padding-bottom-6px{
+    padding-bottom:7px !important;   
+}
+.background-color-eee{
+    background-color:#eee;
+}
+.icon-color{
+    color:#727272 !important;
+}
+.uk-text-justify{
+    text-align:justify !important;
+}
+.uk-text-justify:after {
+    content: "";
+    display: inline-block;
+    width: 100%;    
+}
+.font-weight-200{
+    font-weight:200 !important;
+}
+.text-justify-add{
+    overflow: hidden;
+    height:70px;
+    line-height:1;
+}
+.border-radius-0{
+    border-radius:0 !important;
+}
+.preloader-gif{
+    position:fixed !important;
+    top:49% !important;
+}
+
+.depart-head-text{
+    margin-top:3px;
+}
+.dropdown-height-mini{
+    height:25px !important;
+}
+.text-head-btn{
+   position:relative;
+    top:2px;
+}
+.md-btn-group #group-btn{
+    margin-left:5%;
+}
+.margin-left-2{
+    margin-left:2%;
+}
+.md-card-toolbar{
+    border-bottom:none!important;
+}
+.depart-card-border{
+    border-radius:4px;
+}
+.width-100per{
+    width:100%;
+}
+.pointer{
+    cursor:pointer !important;
+}
+textarea{
+    padding:3%;
+    font-family:'Roboto' !important;
+}
+.card-icons-fix{
+    position: relative;
+    top: -5px;
+}
+.font-size-14{
+    font-size:14px !important;
 }

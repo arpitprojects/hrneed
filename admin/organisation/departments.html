@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hr Need</title>
+        <!--All meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="HRIS"/>
+        <meta property="og:site_name" content="hris"/>
+        <meta property="og:url" content="http://" />
+        <meta property="og:description" content="Human Resources Management System"/>
+        <meta property="og:type" content="website"/>
+        <meta property="article:author" content="" />
+        <meta property="og:image" content="http://" />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <!--All seo meta tags -->
+        <!--Link favicon used form ipl site-->
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <!--All icons-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <link href="../../assests/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
+        <!--End of the all icons-->
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+        <!-- All css-->
+        <link rel="stylesheet" href="../../assests/css/uikit.almost-flat.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/flags.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/style_switcher.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/main.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/themes_combined.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/modal.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/dropify.min.css" media="all"/>
+        <!--End of All css-->
+        <!--Custom Css-->
+        <link rel="stylesheet" href="../../build/css/init.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/grid.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/main.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/media_queries.css" media="all"/>
+        <!--End of the custom css-->
+    </head>
+    <body id="body" class="sidebar_main_open sidebar_main_swipe">
+        <!-- main header -->
+        <!--Preloader-->
+
+        <!--End of the preloader markup-->
+        <header id="header_main">
+            <div class="header_main_content">
+                <nav class="uk-navbar">
+
+                    <!-- main sidebar switch -->
+                    <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
+                        <span class="sSwitchIcon"></span>
+                    </a>
+                    <!-- secondary sidebar switch -->
+                    <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
+                        <span class="sSwitchIcon"></span>
+                    </a> 
+                    <button class="pull-right md-wave" type="button" id="icon-btn1" data-toggle="modal" data-target="#myModal2">
+                        <i class="mdi mdi-24px mdi-help-circle-outline color-white"></i>
+                    </button>
+                </nav>
+            </div>
+            <div class="header_main_search_form">
+                <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+                <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
+                    <input type="text" class="header_main_search_input" />
+                    <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
+                    <script type="text/autocomplete">
+                    <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                        {{~items}}
+                        <li data-value="{{ $item.value }}">
+                            <a href="{{ $item.url }}" class="needsclick">
+                                {{ $item.value }}<br>
+                                <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                        </a>
+                        </li>
+                        {{/items}}
+                        </ul>
+                    </script>
+                </form>
+            </div>
+        </header><!-- main header end -->
+        <!-- main sidebar -->
+        <aside id="sidebar_main">
+
+            <div class="sidebar_main_header">
+                <!--some element deleted by me-->
+                <center>
+                    <img src="../../build/img/m_logo.png" id="logo-adjust" alt="logo" height="60" width="60" class="circle-ele"  />
+                </center>
+            </div>
+
+            <div class="menu_section">
+                <ul>
+
+                    <li title="Organisation">
+                        <a href="javascript:void(0)">
+                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
+                            <span class="menu_title">Organisation</span>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="companysettings()" class="side-btn">Company Profile</a></li>
+                            <li><a href="javascript:void(0)" onclick="departments()">Departments</a></li>
+                            <li><a href="javascript:void(0)">Designations</a></li>
+                            <li><a href="javascript:void(0)">Locations</a></li>
+                            <li><a href="javascript:void(0)">Groups</a></li>
+                            <li><a href="javascript:void(0)">Domains</a></li>
+                            <li><a href="javascript:void(0)">Rebranding</a></li>
+                            <li><a href="javascript:void(0)">Pay period Settings</a></li>
+                            <li><a href="javascript:void(0)">Hoilday Calender</a></li>
+                        </ul>
+
+                    </li>
+                    <li title="Employee">
+                        <a href="javascript:void(0)">
+                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
+                            <span class="menu_title">Employee</span>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)" class="side-btn">Users</a></li>
+                            <li><a href="javascript:void(0)">Employee Profiles</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <br /><br /><br/ ><br />
+
+        <section id="depart-head-down">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-9 col-md-9 col-md-offset-2 col-lg-offset-2">
+                        <p class="depart-head-text uk-text-small uk-text-muted pull-left">Manage all the department details and the department hierarchy in your organization.</p>  
+                        <span class="pull-right">
+                            <div class="md-btn-group">
+                                <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal4" id="group-btn" class="md-btn md-btn-mini md-btn-primary md-btn-wave">Add department</a>
+                                <div class="uk-button-dropdown" id="group-btn" data-uk-dropdown="{mode:'click'}">
+                                    <button class="md-btn md-btn-mini dropdown-height-mini"><span>Sort By <i class="text-head-btn material-icons">&#xE313;</i></span> </button>
+                                    <div class="uk-dropdown">
+                                        <ul class="uk-nav uk-nav-dropdown">
+                                            <li><a href="#">Alphabetically</a></li>
+                                            <li><a href="#">Date</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="uk-button-dropdown" id="group-btn" data-uk-dropdown="{mode:'click'}">
+                                    <button class="md-btn md-btn-mini dropdown-height-mini"><span>View <i class="text-head-btn material-icons">&#xE313;</i></span> </button>
+                                    <div class="uk-dropdown">
+                                        <ul class="uk-nav uk-nav-dropdown">
+                                            <li><a href="#">Grid</a> </li>
+                                            <li><a href="#">List</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="clearfix"></span>
+                        <br /><br />
+                        <br /><br /><br />
+                        <div  id="dragula_sortable" >
+                            <div class="col-sm-4">
+                                <div class="md-card depart-card-border">
+                                    <div class="md-card-toolbar">
+                                        <h3 class="md-card-toolbar-heading-text width-100per">
+                                            <span class="name-of-depart uk-text-medium uk-text-muted palete-color pull-left">HR</span><span class="pull-right">
+                                            <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                                <i class="md-icon material-icons card-icons-fix">&#xE5D3;</i>
+                                                <div class="uk-dropdown uk-dropdown-small">
+                                                    <ul class="uk-nav">
+                                                        <li><a href="#">Edit</a></li>
+                                                        <li><a href="#" class="uk-text-danger">Delete user</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            </span>
+                                            <span class="clearfix"></span>
+                                        </h3>
+                                    </div>
+                                    <div class="md-card-content">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="md-card depart-card-border">
+                                    <div class="md-card-toolbar">
+                                        <h3 class="md-card-toolbar-heading-text width-100per">
+                                            <span class="name-of-depart uk-text-medium uk-text-muted palete-color pull-left">Developer</span><span class="pull-right">
+                                            <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                                <i class="md-icon material-icons card-icons-fix">&#xE5D3;</i>
+                                                <div class="uk-dropdown uk-dropdown-small">
+                                                    <ul class="uk-nav">
+                                                        <li><a href="#">Edit</a></li>
+                                                        <li><a href="#" class="uk-text-danger">Delete user</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            </span>
+                                            <span class="clearfix"></span>
+                                        </h3>
+                                    </div>
+                                    <div class="md-card-content">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Help Center</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>
+                            Coming Soon
+                        </p>
+                    </div> 
+
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div class="modal right fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+                    <div class="modal-body" >
+                        <p class="uk-text-small uk-text-muted">Add Department</p>
+                        <br /><br />
+                        <div class="uk-input-group">
+                            <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-vector-intersection login-icon-font-size"></i></span>
+                            <label class="uk-text-small uk-text-muted">Department Name</label>
+                            <input type="text" class="md-input" />
+                        </div>
+                        <br />
+                        <span class="uk-text-small uk-text-muted">Department Lead</span>
+                        <select id="select_demo_5" data-md-selectize data-md-selectize-bottom data-uk-tooltip="{pos:'top'}" title="Search deptt lead">
+
+                            <option value="">Search lead..</option>
+                            <option value="a">Now Static</option>
+                            <option value="b">Content</option>
+                            <option value="c">Ajax in future</option>
+                        </select>
+                        <br />
+                        <span class="uk-text-small uk-text-muted">Parent Department</span>
+                        <select id="select_demo_5" data-md-selectize data-md-selectize-bottom data-uk-tooltip="{pos:'top'}" title="Search parent deptt">
+
+                            <option value="">Search parent..</option>
+                            <option value="a">Now Static</option>
+                            <option value="b">Content</option>
+                            <option value="c">Ajax in future</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Save</a>
+
+                        </div>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <!--End of modal markups of this page-->
+        <script src="../../assests/js/common.min.js"></script>
+        <script src="../../assests/js/uikit_custom.min.js"></script>
+        <script src="../../assests/js/altair_admin_common.min.js"></script>
+        <script src="../../assests/js/modal.js"></script>
+        <script src="../../assests/js/dropify.min.js"></script>
+        <script src="../../assests/js/perfect-scrollbar.min.js"></script>
+        <script src="../../assests/js/dragula.min.js"></script>
+        <script src="../../build/js/ajax.js"></script>
+        <script src="../../build/js/init.js"></script>
+        <script src="../../build/js/build.js"></script>
+    </body>
+</html>
