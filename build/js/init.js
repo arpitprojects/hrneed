@@ -66,7 +66,15 @@ $(document).ready(function(){
     }else{
         //
     } 
+
+    if($(window).width() < 767){
+        $('#companysettings-second-col').addClass('col-sm-offset-2').addClass('col-xs-offset-2');
+        $('#mobile-view1').addClass('col-sm-offset-2').addClass('col-xs-offset-2');
+    }else{
+        //
+    } 
 });
+
 
 
 $(function() {
@@ -94,7 +102,7 @@ altair_form_file_dropify = {
 
 $(function() {
     // dragula.js
-	altair_sortable.dragula_sortable();
+    altair_sortable.dragula_sortable();
 });
 
 altair_sortable = {
@@ -114,80 +122,144 @@ altair_sortable = {
 
             UIkit.$html.trigger('changed.uk.dom');
             $window.resize();
-
         })
 
     }
 };
 
-window.onload = initMap();
+$(function() {
 
-function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -33.8688, lng: 151.2195},
-      zoom: 13
-    });
-    var input = document.getElementById('searchInput');
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-    var autocomplete = new google.maps.places.Autocomplete(input);
-    autocomplete.bindTo('bounds', map);
-
-    var infowindow = new google.maps.InfoWindow();
-    var marker = new google.maps.Marker({
-        map: map,
-        anchorPoint: new google.maps.Point(0, -29)
-    });
-
-    autocomplete.addListener('place_changed', function() {
-        infowindow.close();
-        marker.setVisible(false);
-        var place = autocomplete.getPlace();
-        if (!place.geometry) {
-            window.alert("Autocomplete's returned place contains no geometry");
-            return;
+    if(Modernizr.touch) {
+        // make table cell focusable
+        var $focus_highlight = $('.focus-highlight');
+        if ( $focus_highlight.length ) {
+            $focus_highlight
+                .find('td, th')
+                .attr('tabindex', '1')
+                .on('touchstart', function() {
+                $(this).focus();
+            });
         }
-  
-        // If the place has a geometry, then present it on a map.
-        if (place.geometry.viewport) {
-            map.fitBounds(place.geometry.viewport);
-        } else {
-            map.setCenter(place.geometry.location);
-            map.setZoom(17);
-        }
-        marker.setIcon(({
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(35, 35)
-        }));
-        marker.setPosition(place.geometry.location);
-        marker.setVisible(true);
-    
-        var address = '';
-        if (place.address_components) {
-            address = [
-              (place.address_components[0] && place.address_components[0].short_name || ''),
-              (place.address_components[1] && place.address_components[1].short_name || ''),
-              (place.address_components[2] && place.address_components[2].short_name || '')
-            ].join(' ');
-        }
-    
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-        infowindow.open(map, marker);
-      
-        //Location details
-        for (var i = 0; i < place.address_components.length; i++) {
-            if(place.address_components[i].types[0] == 'postal_code'){
-                document.getElementById('postal_code').innerHTML = place.address_components[i].long_name;
+        // disable fastclick on table headers (touch devices)
+        $('.tablesorter').find('th').addClass('needsclick');
+    }
+
+    // list view
+    altair_issues.list_view();
+});
+
+altair_issues = {
+    list_view: function() {
+
+        var $ts_issues = $("#ts_issues");
+
+        // define pager options
+        var pagerOptions = {
+            // target the pager markup - see the HTML block below
+            container: $(".ts_pager"),
+            // output string - default is '{page}/{totalPages}'; possible variables: {page}, {totalPages}, {startRow}, {endRow} and {totalRows}
+            output: '{startRow} - {endRow} / {filteredRows} ({totalRows})',
+            // if true, the table will remain the same height no matter how many records are displayed. The space is made up by an empty
+            // table row set to a height to compensate; default is false
+            fixedHeight: true,
+            // remove rows from the table to speed up the sort of large tables.
+            // setting this to false, only hides the non-visible rows; needed if you plan to add/remove rows with the pager enabled.
+            removeRows: false,
+            // go to page selector - select dropdown that sets the current page
+            cssGoto: '.ts_gotoPage'
+        };
+
+        // Initialize tablesorter
+        var ts_users = $ts_issues
+        .tablesorter({
+            theme: 'altair',
+            widthFixed: true,
+            widgets: ['zebra', 'filter']
+        })
+        // initialize the pager plugin
+        .tablesorterPager(pagerOptions)
+        .on('pagerComplete', function(e, filter){
+            // update selectize value
+            if(typeof selectizeObj !== 'undefined' && selectizeObj.data('selectize')) {
+                selectizePage = selectizeObj[0].selectize; selectizePage.setValue($('select.ts_gotoPage option:selected').index() + 1, false);
             }
-            if(place.address_components[i].types[0] == 'country'){
-                document.getElementById('country').innerHTML = place.address_components[i].long_name;
-            }
+        });
+
+        // replace 'goto Page' select
+        function createPageSelectize() {
+            selectizeObj = $('select.ts_gotoPage')
+                .val($("select.ts_gotoPage option:selected").val())
+                .after('<div class="selectize_fix"></div>')
+                .selectize({
+                hideSelected: true,
+                onDropdownOpen: function($dropdown) {
+                    $dropdown
+                        .hide()
+                        .velocity('slideDown', {
+                        duration: 280,
+                        easing: easing_swiftOut
+                    });
+                },
+                onDropdownClose: function($dropdown) {
+                    $dropdown
+                        .show()
+                        .velocity('slideUp', {
+                        duration: 280,
+                        easing: easing_swiftOut
+                    });
+                    // hide tooltip
+                    $('.uk-tooltip').hide();
+                }
+            });
         }
-        document.getElementById('location').innerHTML = place.formatted_address;
-        document.getElementById('lat').innerHTML = place.geometry.location.lat();
-        document.getElementById('lon').innerHTML = place.geometry.location.lng();
-    });
+        createPageSelectize();
+
+        // replace 'pagesize' select
+        $('.pagesize.ts_selectize')
+            .after('<div class="selectize_fix"></div>')
+            .selectize({
+            hideSelected: true,
+            onDropdownOpen: function($dropdown) {
+                $dropdown
+                    .hide()
+                    .velocity('slideDown', {
+                    duration: 280,
+                    easing: easing_swiftOut
+                })
+            },
+            onDropdownClose: function($dropdown) {
+                $dropdown
+                    .show()
+                    .velocity('slideUp', {
+                    duration: 280,
+                    easing: easing_swiftOut
+                });
+
+                // hide tooltip
+                $('.uk-tooltip').hide();
+                if(typeof selectizeObj !== 'undefined' && selectizeObj.data('selectize')) {
+                    selectizePage = selectizeObj[0].selectize;
+                    selectizePage.destroy();
+                    $('.ts_gotoPage').next('.selectize_fix').remove();
+                    setTimeout(function() {
+                        createPageSelectize()
+                    })
+                }
+
+            }
+        });
+
+    }
+};
+//To be used later
+
+function displayMapAt(lat, lon, zoom) {
+    $("#map")
+        .html(
+        "<iframe id=\"map_frame\" "
+        + "width=\"100%\" height=\"600px\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" "
+        + "src=\"https://www.google.sk/maps?f=q&amp;output=embed&amp;source=s_q&amp;hl=sk&amp;geocode=&amp;q=https:%2F%2Fwww.google.sk%2Fmaps%2Fms%3Fauthuser%3D0%26vps%3D5%26hl%3Dsk%26ie%3DUTF8%26oe%3DUTF8%26msa%3D0%26output%3Dkml%26msid%3D205427380680792264646.0004fe643d107ef29299a&amp;aq=&amp;sll=48.669026,19.699024&amp;sspn=4.418559,10.821533&amp;ie=UTF8&amp;ll="
+        + lat + "," + lon
+        + "&amp;spn=0.199154,0.399727&amp;t=m&amp;z="
+        + zoom + "\"" + "></iframe>");
 }

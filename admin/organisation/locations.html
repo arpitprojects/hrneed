@@ -135,7 +135,7 @@
         <section id="depart-head-down">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-lg-9 col-md-9 col-md-offset-2 col-lg-offset-2">
+                    <div class="col-sm-10 col-xs-10 col-lg-9 col-md-9 col-md-offset-2 col-lg-offset-2" id="mobile-view1">
                         <p class="depart-head-text uk-text-small uk-text-muted pull-left">Create multiple locations for your organization and manage location details.</p>  
                         <span class="pull-right">
                             <div class="md-btn-group">
@@ -161,8 +161,8 @@
                             </div>
                         </span>
                         <span class="clearfix"></span>
-                        <br /><br />
-                        <br /><br /><br />
+                        <hr /><br />
+                        <br />
                         <div  id="dragula_sortable" >
                             <div class="col-sm-4">
                                 <div class="md-card depart-card-border">
@@ -183,6 +183,34 @@
                                         </h3>
                                     </div>
                                     <div class="md-card-content">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="200" frameborder="0" style="border:0"></iframe>
+                                        <br /><br />
+                                        <img src="../../assests/img/locations-img/hyderabad.png" class="img-responsive" alt="Location Images"/>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-sm-4">
+                                <div class="md-card depart-card-border">
+                                    <div class="md-card-toolbar">
+                                        <h3 class="md-card-toolbar-heading-text width-100per">
+                                            <span class="name-of-depart uk-text-medium uk-text-muted palete-color pull-left">Kolkata</span><span class="pull-right">
+                                            <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                                <i class="md-icon material-icons card-icons-fix">&#xE5D3;</i>
+                                                <div class="uk-dropdown uk-dropdown-small">
+                                                    <ul class="uk-nav">
+                                                        <li><a href="#">Edit</a></li>
+                                                        <li><a href="#" class="uk-text-danger">Delete user</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            </span>
+                                            <span class="clearfix"></span>
+                                        </h3>
+                                    </div>
+                                    <div class="md-card-content">
+                                         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="200" frameborder="0" style="border:0"></iframe>
+                                        <br /><br />
+                                        <img src="../../assests/img/locations-img/hyderabad.png" class="img-responsive" alt="Location Images"/>
                                     </div>
                                 </div>
                             </div> 
@@ -230,13 +258,13 @@
                         <div class="uk-input-group">
                             <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-magnify login-icon-font-size"></i></span>
                             <label class="uk-text-small uk-text-muted">Country Name</label>
-                            <input type="text" class="md-input" "searchInput" />
+                            <input type="text" class="md-input" id="searchTextField" autocomplete="on"/>
                             <div id="map" class="display-none"></div>
                         </div>
                         <br />
                         <div class="uk-input-group">
                             <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-information-variant login-icon-font-size"></i></span>
-                            
+
                             <div class="uk-margin">
                                 <textarea class="uk-textarea" rows="5" style="width:283px;height:81px;" placeholder="Add a description"></textarea>
                             </div>
@@ -261,7 +289,8 @@
         <script src="../../assests/js/dropify.min.js"></script>
         <script src="../../assests/js/perfect-scrollbar.min.js"></script>
         <script src="../../assests/js/dragula.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQBO-3psw25k86Nv7uJfiSoNcGrytRJAc&libraries=places"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7Inu4WqqcWZ5AUp9IGoI0xF3_qoZyXAU&libraries=places&callback=initialize"
+                async defer></script>
         <script src="../../build/js/ajax.js"></script>
         <script src="../../build/js/init.js"></script>
         <script src="../../build/js/build.js"></script>

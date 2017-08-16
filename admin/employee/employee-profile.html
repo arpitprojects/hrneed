@@ -134,84 +134,24 @@
         <section id="depart-head-down">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-10 col-xs-10 col-lg-9 col-md-9 col-md-offset-2 col-lg-offset-2" id="mobile-view1">
-                        <p class="depart-head-text uk-text-small uk-text-muted pull-left">Manage all the department details and the department hierarchy in your organization.</p>  
+                    <div class="col-sm-10 col-xs-10 col-lg-10 col-md-10 col-md-offset-2 col-lg-offset-2" id="mobile-view1">
+                        <p class="depart-head-text uk-text-small uk-text-muted pull-left">Total Users: </p>  
                         <span class="pull-right">
                             <div class="md-btn-group">
-                                <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal4" id="group-btn" class="md-btn md-btn-mini md-btn-primary md-btn-wave">Add department</a>
+                                <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal15" id="group-btn" class="md-btn md-btn-mini md-btn-primary md-btn-wave">Add<i class="mdi mdi-plus"></i></a>
                                 <div class="uk-button-dropdown" id="group-btn" data-uk-dropdown="{mode:'click'}">
-                                    <button class="md-btn md-btn-mini dropdown-height-mini"><span>Sort By <i class="text-head-btn material-icons">&#xE313;</i></span> </button>
+                                    <button class="md-btn md-btn-mini dropdown-height-mini"><span>Import <i class="text-head-btn material-icons">&#xE313;</i></span> </button>
                                     <div class="uk-dropdown">
                                         <ul class="uk-nav uk-nav-dropdown">
-                                            <li><a href="#">Alphabetically</a></li>
-                                            <li><a href="#">Date</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="uk-button-dropdown" id="group-btn" data-uk-dropdown="{mode:'click'}">
-                                    <button class="md-btn md-btn-mini dropdown-height-mini"><span>View <i class="text-head-btn material-icons">&#xE313;</i></span> </button>
-                                    <div class="uk-dropdown">
-                                        <ul class="uk-nav uk-nav-dropdown">
-                                            <li><a href="#">Grid</a> </li>
-                                            <li><a href="#">List</a></li>
+                                            <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal12">Import Users</a></li>
+
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </span>
                         <span class="clearfix"></span>
-                        <hr/><br />
-                        <br /><br /><br />
-                        <div  id="dragula_sortable" >
-                            <div class="col-sm-4">
-                                <div class="md-card depart-card-border">
-                                    <div class="md-card-toolbar">
-                                        <h3 class="md-card-toolbar-heading-text width-100per">
-                                            <span class="name-of-depart uk-text-medium uk-text-muted palete-color pull-left">HR</span><span class="pull-right">
-                                            <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
-                                                <i class="md-icon material-icons card-icons-fix">&#xE5D3;</i>
-                                                <div class="uk-dropdown uk-dropdown-small">
-                                                    <ul class="uk-nav">
-                                                        <li><a href="#">Edit</a></li>
-                                                        <li><a href="#" class="uk-text-danger">Delete department</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            </span>
-                                            <span class="clearfix"></span>
-                                        </h3>
-                                    </div>
-                                    <div class="md-card-content">
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="md-card depart-card-border">
-                                    <div class="md-card-toolbar">
-                                        <h3 class="md-card-toolbar-heading-text width-100per">
-                                            <span class="name-of-depart uk-text-medium uk-text-muted palete-color pull-left">Developer</span><span class="pull-right">
-                                            <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
-                                                <i class="md-icon material-icons card-icons-fix">&#xE5D3;</i>
-                                                <div class="uk-dropdown uk-dropdown-small">
-                                                    <ul class="uk-nav">
-                                                        <li><a href="#">Edit</a></li>
-                                                        <li><a href="#" class="uk-text-danger">Delete department</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            </span>
-                                            <span class="clearfix"></span>
-                                        </h3>
-                                    </div>
-                                    <div class="md-card-content">
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                        <hr/>
                     </div>
                 </div>
             </div>
@@ -235,8 +175,8 @@
                 </div><!-- modal-content -->
             </div><!-- modal-dialog -->
         </div><!-- modal -->
-        <div class="modal right fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-            <div class="modal-dialog" role="document">
+        <div class="modal right fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document" id="custom-modal-600" >
                 <div class="modal-content">
                     <br /><hr/><!--To avoid upper margin-->
                     <div class="modal-header" id="modal-help-header">
@@ -244,36 +184,112 @@
                         <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
                     </div>
                     <div class="modal-body" >
-                        <p class="uk-text-small uk-text-muted">Add Department</p>
+                        <p class="uk-text-small uk-text-muted font-size-14">Wizard Menu </p>
                         <br /><br />
-                        <div class="uk-input-group">
-                            <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-vector-intersection login-icon-font-size"></i></span>
-                            <label class="uk-text-small uk-text-muted">Department Name</label>
-                            <input type="text" class="md-input" />
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <pre>*Only Csv/xslx file required</pre>
+                                <div class="md-card">
+                                    <div class="md-card-content">
+                                        <input type="file" id="input-file-e" class="dropify" data-max-file-size="200K" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <br />
-                        <span class="uk-text-small uk-text-muted">Department Lead</span>
-                        <select id="select_demo_5" data-md-selectize data-md-selectize-bottom data-uk-tooltip="{pos:'top'}" title="Search deptt lead">
-
-                            <option value="">Search lead..</option>
-                            <option value="a">Now Static</option>
-                            <option value="b">Content</option>
-                            <option value="c">Ajax in future</option>
-                        </select>
-                        <br />
-                        <span class="uk-text-small uk-text-muted">Parent Department</span>
-                        <select id="select_demo_5" data-md-selectize data-md-selectize-bottom data-uk-tooltip="{pos:'top'}" title="Search parent deptt">
-
-                            <option value="">Search parent..</option>
-                            <option value="a">Now Static</option>
-                            <option value="b">Content</option>
-                            <option value="c">Ajax in future</option>
-                        </select>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
 
-                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Save</a>
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Analyse</a>
+
+                        </div>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div class="modal right fade" id="myModal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document" id="custom-modal-600" >
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <br/><br /><br/>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-account-plus login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Employee Id<span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-account-plus login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">First Name <span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-account-plus login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Last Name<span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div> 
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-12 col-md-8 col-lg-8 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-email login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Email <span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Add</a>
+
+                        </div>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div class="modal right fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document" id="custom-modal-600" >
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+                    <div class="modal-body" >
+                        <p class="uk-text-small uk-text-muted font-size-14">Enter multiple email ids separated by comma. Users get email invitations to their email id's and will become part of the organization once they accept the invitation. </p>
+                        <br /><br />
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-email-open-outline login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Employee Email ids <span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Add Multiple</a>
 
                         </div>
                     </div>
@@ -288,6 +304,10 @@
         <script src="../../assests/js/dropify.min.js"></script>
         <script src="../../assests/js/perfect-scrollbar.min.js"></script>
         <script src="../../assests/js/dragula.min.js"></script>
+        <script src="../../assests/js/jquery.tablesorter.min.js"></script>
+        <script src="../../assests/js/widget-alignChar.min.js"></script>
+        <script src="../../assests/js/jquery.tablesorter.widgets.min.js"></script>
+        <script src="../../assests/js/jquery.tablesorter.pager.min.js"></script>
         <script src="../../build/js/ajax.js"></script>
         <script src="../../build/js/init.js"></script>
         <script src="../../build/js/build.js"></script>
