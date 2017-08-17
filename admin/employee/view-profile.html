@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hr Need</title>
+        <!--All meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="HRIS"/>
+        <meta property="og:site_name" content="hris"/>
+        <meta property="og:url" content="http://" />
+        <meta property="og:description" content="Human Resources Management System"/>
+        <meta property="og:type" content="website"/>
+        <meta property="article:author" content="" />
+        <meta property="og:image" content="http://" />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <!--All seo meta tags -->
+        <!--Link favicon used form ipl site-->
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <!--All icons-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <link href="../../assests/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
+        <!--End of the all icons-->
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+        <!-- All css-->
+        <link rel="stylesheet" href="../../assests/css/uikit.almost-flat.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/flags.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/style_switcher.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/main.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/themes_combined.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/modal.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/dropify.min.css" media="all"/>
+        <!--End of All css-->
+        <!--Custom Css-->
+        <link rel="stylesheet" href="../../build/css/init.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/grid.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/main.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/media_queries.css" media="all"/>
+        <!--End of the custom css-->
+    </head>
+    <body id="body" class="sidebar_main_open sidebar_main_swipe" style="overflow:scroll;">
+        <!-- main header -->
+        <!--Preloader-->
+
+        <!--End of the preloader markup-->
+        <header id="header_main">
+            <div class="header_main_content">
+                <nav class="uk-navbar">
+
+                    <!-- main sidebar switch -->
+                    <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
+                        <span class="sSwitchIcon"></span>
+                    </a>
+                    <!-- secondary sidebar switch -->
+                    <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
+                        <span class="sSwitchIcon"></span>
+                    </a> 
+                    <button class="pull-right md-wave" type="button" id="icon-btn1" data-toggle="modal" data-target="#myModal2">
+                        <i class="mdi mdi-24px mdi-help-circle-outline color-white"></i>
+                    </button>
+                </nav>
+            </div>
+            <div class="header_main_search_form">
+                <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+                <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
+                    <input type="text" class="header_main_search_input" />
+                    <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
+                    <script type="text/autocomplete">
+                    <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                        {{~items}}
+                        <li data-value="{{ $item.value }}">
+                            <a href="{{ $item.url }}" class="needsclick">
+                                {{ $item.value }}<br>
+                                <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                        </a>
+                        </li>
+                        {{/items}}
+                        </ul>
+                    </script>
+                </form>
+            </div>
+        </header><!-- main header end -->
+        <!-- main sidebar -->
+        <aside id="sidebar_main">
+
+            <div class="sidebar_main_header">
+                <!--some element deleted by me-->
+                <center>
+                    <img src="../../build/img/m_logo.png" id="logo-adjust" alt="logo" height="60" width="60" class="circle-ele"  />
+                </center>
+            </div>
+
+            <div class="menu_section">
+                <ul>
+                    <li title="Organisation">
+                        <a href="javascript:void(0)">
+                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
+                            <span class="menu_title">Organisation</span>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="companysettings()" class="side-btn">Company Profile</a></li>
+                            <li><a href="javascript:void(0)" onclick="departments()">Departments</a></li>
+                            <li><a href="javascript:void(0)">Designations</a></li>
+                            <li><a href="javascript:void(0)">Locations</a></li>
+                            <li><a href="javascript:void(0)">Groups</a></li>
+                            <li><a href="javascript:void(0)">Domains</a></li>
+                            <li><a href="javascript:void(0)">Rebranding</a></li>
+                            <li><a href="javascript:void(0)">Pay period Settings</a></li>
+                            <li><a href="javascript:void(0)">Hoilday Calender</a></li>
+                        </ul>
+
+                    </li>
+                    <li title="Employee">
+                        <a href="javascript:void(0)">
+                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
+                            <span class="menu_title">Employee</span>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)" class="side-btn">Users</a></li>
+                            <li><a href="javascript:void(0)">Employee Profiles</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <br /><br /><br/ ><br />
+
+        <section id="depart-head-down">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 col-xs-10 col-lg-10 col-md-10 col-md-offset-2 col-lg-offset-2" id="mobile-view1">
+                        <div class="md-card">
+                            <div class="user_heading ">
+                                <div class="user_heading_menu hidden-print">
+                                    <div class="uk-display-inline-block" data-uk-dropdown="{pos:'left-top'}">
+                                        <i class="md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
+                                        <div class="uk-dropdown uk-dropdown-small">
+                                            <ul class="uk-nav">
+                                                <li><a href="#">Edit</a></li>
+                                                <li><a href="#">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="uk-display-inline-block"><i class="md-icon md-icon-light material-icons uk-text-muted" id="page_print">&#xE8ad;</i></div>
+                                </div>
+                                <div class="user_heading_avatar">
+                                    <br />
+                                    <div class="thumbnail">
+                                        <img src="http://placehold.it/300x300" alt="user avatar"/>
+                                    </div>
+                                </div>
+                                <div class="user_heading_content margin-top-1">
+
+                                    <h2 class="heading_b uk-margin-bottom border-sideways"><span class="uk-text-truncate uk-text-muted font-size-16 font-weight-500">Your Name</span><span class="uk-text-muted font-size-12 sub-heading letter-spacing-0">name@companyname.com</span>
+
+                                        <span class="uk-text-muted font-size-12 sub-heading letter-spacing-0">+91-0000000000</span>
+
+                                        <p class="uk-text-medium uk-text-muted"><span class="uk-badge uk-badge-success">Active</span></p>
+                                    </h2>
+                                </div>
+                                <a class="md-fab md-fab-small md-fab-accent hidden-print" href="#!">
+                                    <i class="material-icons">&#xE150;</i>
+                                </a>
+                            </div>
+                            <div class="user_content padding-bottom-0">
+                                <ul id="user_profile_tabs" class="uk-tab" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" data-uk-sticky="{ top: 48, media: 960 }">
+                                    <li class="uk-active"><a href="#">About</a></li>
+                                    <li class=""><a href="#">Personal</a></li>
+                                    <li><a href="#">Work Experience</a></li>
+                                    <li><a href="#">Education</a></li>
+
+                                    <li><a href="#">Training</a></li>
+                                    <li><a href="#">Travel Expenses</a></li>
+                                    <li><a href="#">Dependent</a></li>
+                                </ul>
+                                <ul id="user_profile_tabs_content" class="uk-switcher uk-margin">
+                                    <li>
+                                        <!--About Tab-->
+                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
+                                            <div class="md-card-content">
+                                                <ul class="md-list">
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Employee Id</span>
+                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">46</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Department</span>
+                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">Developer</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Role </span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">Data Scientist</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Source Of Hire</span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">LinkedIn</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Seating Location</span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">B-46</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
+                                            <div class="md-card-content">
+                                                <ul class="md-list">
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Gender</span>
+                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Male</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Reporting To</span>
+                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Head name</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Date of joining</span>
+                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">12 June 2016</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Location </span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">KOLKATA</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Work Phone</span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">N.A.</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!--About Tab-->
+                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
+                                            <div class="md-card-content">
+                                                <ul class="md-list">
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Mobile Phone</span>
+                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">+91-0000000000</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Other Email</span>
+                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">name@gmail.com</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Birth Day </span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">dd mm yyyy</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Martial Status</span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">    Single</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Address</span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">Flat no 4 , Janakpuri West.</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
+                                            <div class="md-card-content">
+                                                <ul class="md-list">
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Expertise</span>
+                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Data Analytics</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Job Description</span>
+                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">12 June 2016</span>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!--Third Tab-->
+                                        <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
+                                            <table class="uk-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="">Previous Company Name</th>
+                                                        <th class="">Job Title</th>
+                                                        <th class="">From Date</th>
+                                                        <th class="t">To Date</th>
+                                                        <th class="">Job Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="uk-text-muted font-size-14">Pedagoge Pvt Ltd</td>
+                                                        <td class="uk-text-muted font-size-14">Data Scientist</td>
+                                                        <td class="uk-text-muted font-size-14">28 Nov 2015</td>
+                                                        <td class="uk-text-muted font-size-14">02 Jan 2016</td>
+                                                        <td class="uk-text-muted font-size-14">Analytics</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="uk-text-muted font-size-14">SocialCops Pvt Ltd</td>
+                                                        <td class="uk-text-muted font-size-14">Data Scientist</td>
+                                                        <td class="uk-text-muted font-size-14">28 Nov 2015</td>
+                                                        <td class="uk-text-muted font-size-14">02 Jan 2016</td>
+                                                        <td class="uk-text-muted font-size-14">Analytics Work</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                    </li>
+                                    <li><div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
+                                        <table class="uk-table">
+                                            <thead>
+                                                <tr>
+                                                    <th >School Name</th>
+                                                    <th class="">Degree/Diploma</th>
+                                                    <th class="">Field Of Study</th>
+                                                    <th class="t">Date Of completion</th>
+                                                    <th class="">Additional Notes</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="uk-text-muted font-size-14">St. Joshep's School</td>
+                                                    <td class="uk-text-muted font-size-14">Secondary Education</td>
+                                                    <td class="uk-text-muted font-size-14">NA</td>
+                                                    <td class="uk-text-muted font-size-14">02 Jan 2010</td>
+                                                    <td class="uk-text-muted font-size-14">Batch Topper</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
+                                            <div class="md-card-content">
+                                                <ul class="md-list">
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Training Title</span>
+                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Data Visualization</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Time Period</span>
+                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">45 Days</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Trainer </span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">Head Name</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Venue</span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">Netherlands</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Tarining Source</span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">Online</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
+                                            <div class="md-card-content">
+                                                <ul class="md-list">
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Start Date</span>
+                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">12 Nov 2015</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">End Date</span>
+                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">25 Nov 2016</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Status </span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">Not Completed</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Venue</span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">Netherlands</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Special Note</span>
+                                                            <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">Not Found</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    <li>    
+                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
+                                            <div class="md-card-content">
+                                                <ul class="md-list">
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Employee Id</span>
+                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">46</span>
+                                                        </div>
+                                                    </li> 
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5"><div class="md-card-content">
+                                            <ul class="md-list">
+                                                <li>
+                                                    <div class="md-list-content">
+                                                        <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Travel Id</span>
+                                                        <span class="md-list-heading uk-text-large uk-text-success font-weight-200">ABC1234</span>
+                                                    </div>
+                                                </li> 
+                                            </ul>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
+
+                                            <br/>
+                                            <p class="uk-text-center uk-text-muted font-size-16 font-weight-600">Expense Report</p>
+                                            <br />
+                                            <table class="uk-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="">Description</th>
+                                                        <th class="">To Date</th>
+
+                                                        <th class="t">From Date</th>
+                                                        <th class="">Type</th>
+                                                        <th class="">Bill</th>
+                                                        <th>Others</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="uk-text-muted font-size-14">Train Travel</td>
+                                                        <td class="uk-text-muted font-size-14">7 Nov 2016</td>
+                                                        <td class="uk-text-muted font-size-14">8 Nov 2016</td>
+                                                        <td class="uk-text-muted font-size-14">Train </td>
+                                                        <td class="uk-text-muted font-size-14">2600/-</td>
+                                                        <td class="uk-text-muted font-size-14">N.A</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>    
+                                        <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
+                                            <table class="uk-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="">Name</th>
+                                                        <th class="">Relationship</th>
+
+                                                        <th class="t">Date Of Birth</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="uk-text-muted font-size-14">Name </td>
+                                                        <td class="uk-text-muted font-size-14">R/w</td>
+                                                        <td class="uk-text-muted font-size-14">dd mm yyyy</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="uk-text-muted font-size-14">Name </td>
+                                                        <td class="uk-text-muted font-size-14">R/w</td>
+                                                        <td class="uk-text-muted font-size-14">dd mm yyyy</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="uk-text-muted font-size-14">Name </td>
+                                                        <td class="uk-text-muted font-size-14">R/w</td>
+                                                        <td class="uk-text-muted font-size-14">dd mm yyyy</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Help Center</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close-circle-outline mdi-18px pink-diff"></i></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>
+                            Coming Soon
+                        </p>
+                    </div> 
+
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div class="modal right fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document" id="custom-modal-600" >
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+                    <div class="modal-body" >
+                        <p class="uk-text-small uk-text-muted font-size-14">Wizard Menu </p>
+                        <br /><br />
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <pre>*Only Csv/xslx file required</pre>
+                                <div class="md-card">
+                                    <div class="md-card-content">
+                                        <input type="file" id="input-file-e" class="dropify" data-max-file-size="200K" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Analyse</a>
+
+                        </div>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div class="modal right fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document" id="custom-modal-600" >
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+                    <div class="modal-body" >
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                            <p class="uk-text-muted font-size-12">Fill in the mandatory fields, and click invite. User gets email invitation sent to the email id mentioned. Once the invitation is accepted, the user becomes part of the organization</p>
+                        </div>
+                        <br />  <br /><br/>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-account-plus login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Employee Id<span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-account-plus login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">First Name <span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-account-plus login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Last Name<span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div> 
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-12 col-md-8 col-lg-8 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-email login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Email <span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Add</a>
+
+                        </div>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div class="modal right fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document" id="custom-modal-600" >
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+                    <div class="modal-body" >
+                        <p class="uk-text-small uk-text-muted font-size-14">Enter multiple email ids separated by comma. Users get email invitations to their email id's and will become part of the organization once they accept the invitation. </p>
+                        <br /><br />
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-email-open-outline login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Employee Email ids <span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Add Multiple</a>
+
+                        </div>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <!--End of modal markups of this page-->
+        <script src="../../assests/js/common.min.js"></script>
+        <script src="../../assests/js/uikit_custom.min.js"></script>
+        <script src="../../assests/js/altair_admin_common.min.js"></script>
+        <script src="../../assests/js/modal.js"></script>
+        <script src="../../assests/js/dropify.min.js"></script>
+        <script src="../../assests/js/perfect-scrollbar.min.js"></script>
+        <script src="../../assests/js/dragula.min.js"></script>
+        <script src="../../assests/js/jquery.tablesorter.min.js"></script>
+        <script src="../../assests/js/widget-alignChar.min.js"></script>
+        <script src="../../assests/js/jquery.tablesorter.widgets.min.js"></script>
+        <script src="../../assests/js/jquery.tablesorter.pager.min.js"></script>
+        <script src="../../build/js/ajax.js"></script>
+        <script src="../../build/js/init.js"></script>
+        <script src="../../build/js/build.js"></script>
+    </body>
+</html>

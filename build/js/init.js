@@ -292,3 +292,6 @@ $(document).ready(function(){
     $('tr.tablesorter-filter-row.tablesorter-ignoreRow td:first-child').addClass('display-none');
     //$("td[data-column='7']").addClass('display-none');
 });
+
+
+

@@ -71,15 +71,15 @@
                     <input type="text" class="header_main_search_input" />
                     <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
                     <script type="text/autocomplete">
-                    <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
-                        {{~items}}
-                        <li data-value="{{ $item.value }}">
-                            <a href="{{ $item.url }}" class="needsclick">
-                                {{ $item.value }}<br>
-                                <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                        <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                            {{~items}}
+                            <li data-value="{{ $item.value }}">
+                                <a href="{{ $item.url }}" class="needsclick">
+                                    {{ $item.value }}<br>
+                                    <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
                         </a>
                         </li>
-                        {{/items}}
+                            {{/items}}
                         </ul>
                     </script>
                 </form>
@@ -167,8 +167,8 @@
                                 <div class="md-card depart-card-border">
                                     <div class="md-card-toolbar">
                                         <h3 class="md-card-toolbar-heading-text width-100per">
-                                            <span class="name-of-depart uk-text-medium uk-text-muted palete-color pull-left">HR</span><span class="pull-right">
-                                            <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                            <span class="name-of-depart uk-text-medium uk-text-muted palete-color pull-left font-size-15" style="font-size:16px!important;">HR</span><span class="pull-right">
+                                            <div class="md-card-head-menu pointer uk-text-muted" data-uk-dropdown="{pos:'bottom-right'}">
                                                 <i class="md-icon material-icons card-icons-fix">&#xE5D3;</i>
                                                 <div class="uk-dropdown uk-dropdown-small">
                                                     <ul class="uk-nav">
@@ -180,19 +180,29 @@
                                             </span>
                                             <span class="clearfix"></span>
                                         </h3>
-                                    </div>
-                                    <div class="md-card-content">
+                                        <br />
+                                        <div class="md-card-content">
+                                            <div class="depart-content">
+                                                <span class="pull-left">
+                                                    <p class="uk-text-muted font-size-14"> Department Head name</p>
+                                                    <br />
+                                                    <p class="uk-text-muted font-size-13"> name@companyname.com</p>
+                                                    <br />
+                                                    <p class="uk-text-muted font-size-13"> +91-000000000</p>
+                                                    <br />
+                                                </span>
 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="col-sm-4">
                                 <div class="md-card depart-card-border">
                                     <div class="md-card-toolbar">
                                         <h3 class="md-card-toolbar-heading-text width-100per">
-                                            <span class="name-of-depart uk-text-medium uk-text-muted palete-color pull-left">Developer</span><span class="pull-right">
-                                            <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                            <span class="name-of-depart uk-text-medium uk-text-muted palete-color pull-left font-size-15" style="font-size:16px!important;">Developer</span><span class="pull-right">
+                                            <div class="md-card-head-menu pointer uk-text-muted" data-uk-dropdown="{pos:'bottom-right'}">
                                                 <i class="md-icon material-icons card-icons-fix">&#xE5D3;</i>
                                                 <div class="uk-dropdown uk-dropdown-small">
                                                     <ul class="uk-nav">
@@ -204,10 +214,23 @@
                                             </span>
                                             <span class="clearfix"></span>
                                         </h3>
-                                    </div>
-                                    <div class="md-card-content">
+                                        <br />
+                                        <div class="md-card-content">
+                                            <div class="depart-content">
+                                                <span class="pull-left">
+                                                    <p class="uk-text-muted font-size-14"> Department Head name</p>
+                                                    <br />
+                                                    <p class="uk-text-muted font-size-13"> name@companyname.com</p>
+                                                    <br />
+                                                    <p class="uk-text-muted font-size-13"> +91-000000000</p>
+                                                    <br />
+                                                </span>
+
+                                            </div>
+                                        </div>
 
                                     </div>
+
                                 </div>
 
                             </div>

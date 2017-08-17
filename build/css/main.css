@@ -448,3 +448,42 @@ textarea{
 tablesorter-filter-row tablesorter-ignoreRow td:first-child , tablesorter-filter-row tablesorter-ignoreRow td:last-child{
     display:none !important;
 }
+font-size-15{
+    font-size:15px !important;
+}
+.md-card .md-card-toolbar{
+    height:auto !important;
+}
+.md-card .md-card-content{
+    padding:0 !important;
+}
+.selectize-control.single .selectize-input{
+    padding:0 !important;
+}
+.user_heading{
+    background-color:#eee !important;   
+}
+.font-size-15{
+    font-size:15px;
+}
+.font-size-16{
+    font-size:16px;
+}
+.border-sideways{
+    border-left:1px solid #eee;
+}
+.margin-top-1{
+    margin-top:1%;
+}
+.letter-spacing-0{
+    letter-spacing: 0.5px;
+}
+.font-weight-200{
+    font-weight:200!important;
+}
+.font-weight-600{
+    font-weight:600!important;
+}
+.padding-bottom-0{
+    padding-bottom:0 !important;
+}
