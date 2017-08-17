@@ -263,3 +263,32 @@ function displayMapAt(lat, lon, zoom) {
         + "&amp;spn=0.199154,0.399727&amp;t=m&amp;z="
         + zoom + "\"" + "></iframe>");
 }
+
+
+function toggle_list_grid(){
+    //var flag = 0;
+    var grid = document.getElementById('grid-view-employee');
+    var list = document.getElementById('list-view-employee');
+    var btn1 = document.getElementById('btn1');
+    var btn2 = document.getElementById('btn2');
+    grid.className += ' display-none';
+    $('#list-view-employee').removeClass('display-none');
+    btn1.className += ' display-none';
+    $('#btn2').removeClass('display-none');
+}
+
+function toggle_grid_btn(){
+    var grid = document.getElementById('grid-view-employee');
+    var list = document.getElementById('list-view-employee');
+    var btn1 = document.getElementById('btn1');
+    var btn2 = document.getElementById('btn2');
+    $('#grid-view-employee').removeClass('display-none');
+    list.className += ' display-none';
+    btn2.className += ' display-none';
+    $('#btn1').removeClass('display-none');
+}
+
+$(document).ready(function(){
+    $('tr.tablesorter-filter-row.tablesorter-ignoreRow td:first-child').addClass('display-none');
+    //$("td[data-column='7']").addClass('display-none');
+});

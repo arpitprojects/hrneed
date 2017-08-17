@@ -134,7 +134,7 @@
         <section id="depart-head-down">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-10 col-xs-10 col-lg-10 col-md-10 col-md-offset-2 col-lg-offset-2 overflow-auto" id="mobile-view1">
+                    <div class="col-sm-10 col-xs-10 col-lg-10 col-md-10 col-md-offset-2 col-lg-offset-2" id="mobile-view1">
                         <p class="depart-head-text uk-text-small uk-text-muted pull-left">Total Users: </p>  
                         <span class="pull-right">
                             <div class="md-btn-group">
@@ -152,26 +152,17 @@
                                     <div class="uk-dropdown">
                                         <ul class="uk-nav uk-nav-dropdown">
                                             <li class="md-btn-wave"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal12">Import Users</a></li>
-
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="uk-button-dropdown" id="group-btn" data-uk-dropdown="{mode:'click'}">
-                                    <button class="md-btn md-btn-mini dropdown-height-mini md-btn-wave"><span>Sync <i class="text-head-btn material-icons">&#xE313;</i></span> </button>
-                                    <div class="uk-dropdown">
-                                        <ul class="uk-nav uk-nav-dropdown">
-                                            <li class="md-btn-wave"><a href="#">Import From Custom</a> </li>
-                                            <li class="md-btn-wave"><a href="#">Import From Gmail</a></li>
-                                            <li class="md-btn-wave"><a href="#">Import From Linkedin</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <button id="btn1" onclick="toggle_list_grid()" class="md-btn md-btn-mini md-btn-primary md-btn-wave grid-button"><i class="mdi mdi-view-list"></i></button>
+                                <button id="btn2" onclick="toggle_grid_btn()" class="md-btn md-btn-mini md-btn-primary md-btn-wave display-none list-button"><i class="mdi mdi-view-grid"></i></button>
                             </div>
                         </span>
                         <span class="clearfix"></span>
                         <hr/>
-                        <div class="overflow-auto"> 
-                            <div class="md-card overflow-auto">
+                        <div> 
+                            <div class="md-card display-none" id="list-view-employee">
                                 <div class="md-card-content">
                                     <div class="uk-overflow-container uk-margin-bottom">
                                         <table class="uk-table uk-table-align-vertical uk-table-nowrap tablesorter tablesorter-altair" id="ts_issues">
@@ -285,11 +276,126 @@
                                         </li>
                                     </ul>
                                 </div>
+                            </div><!--End of md-card overflow-->
+                            <div id="grid-view-employee">
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                                        <div>
+                                            <div class="md-card md-card-hover">
+                                                <div class="md-card-head">
+                                                    <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                                        <i class="md-icon material-icons uk-text-muted">&#xE5D4;</i>
+                                                        <div class="uk-dropdown uk-dropdown-small">
+                                                            <ul class="uk-nav">
+                                                                <li><a href="#">Edit</a></li>
+                                                                <li><a href="#">Remove</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-text-center">
+                                                        <img class="img-responsive md-card-head-avatar" src="http://placehold.it/800x800 " alt=""/>
+                                                    </div>
+                                                    <h3 class="md-card-head-text uk-text-center uk-text-muted">
+                                                       Your Name                               <span class="uk-text-truncate uk-text-muted">Data Scientist</span>
+                                                    </h3>
+                                                    
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">name@yourcompany.com</span>
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">+91-0000000000</span>
+                                                    
+                                                    <div class="md-card-content">
+                                                        <span class="">
+                                                            <p class="uk-text-small uk-text-truncate uk-text-center uk-text-muted"><span class="uk-badge uk-badge-primary">Active</span></p>
+                                                        </span>
+                                                        
+                                                        <br />
+                                                        <center>
+                                                            <button class="md-btn md-btn-wave md-btn-small md-btn-primary"><span class="uk-text-mini">View Profile</span></button>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--End of the one card -->
+                                       <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                                        <div>
+                                            <div class="md-card md-card-hover">
+                                                <div class="md-card-head">
+                                                    <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                                        <i class="md-icon material-icons uk-text-muted">&#xE5D4;</i>
+                                                        <div class="uk-dropdown uk-dropdown-small">
+                                                            <ul class="uk-nav">
+                                                                <li><a href="#">Edit</a></li>
+                                                                <li><a href="#">Remove</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-text-center">
+                                                        <img class="img-responsive md-card-head-avatar" src="http://placehold.it/800x800 " alt=""/>
+                                                    </div>
+                                                    <h3 class="md-card-head-text uk-text-center uk-text-muted">
+                                                       Your Name                               <span class="uk-text-truncate uk-text-muted">Data Scientist</span>
+                                                    </h3>
+                                                    
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">name@yourcompany.com</span>
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">+91-0000000000</span>
+                                                    
+                                                    <div class="md-card-content">
+                                                        <span class="">
+                                                            <p class="uk-text-small uk-text-truncate uk-text-center uk-text-muted"><span class="uk-badge uk-badge-danger">Resigned</span></p>
+                                                        </span>
+                                                        
+                                                        <br />
+                                                        <center>
+                                                            <button class="md-btn md-btn-wave md-btn-small md-btn-primary"><span class="uk-text-mini">View Profile</span></button>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--End of the one card -->
+                                       <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                                        <div>
+                                            <div class="md-card md-card-hover">
+                                                <div class="md-card-head">
+                                                    <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-left'}">
+                                                        <i class="md-icon material-icons uk-text-muted">&#xE5D4;</i>
+                                                        <div class="uk-dropdown uk-dropdown-small">
+                                                            <ul class="uk-nav">
+                                                                <li><a href="#">Edit</a></li>
+                                                                <li><a href="#">Remove</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-text-center">
+                                                        <img class="img-responsive md-card-head-avatar" src="http://placehold.it/800x800 " alt=""/>
+                                                    </div>
+                                                    <h3 class="md-card-head-text uk-text-center uk-text-muted">
+                                                       Your Name                               <span class="uk-text-truncate uk-text-muted">Data Scientist</span>
+                                                    </h3>
+                                                    
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">name@yourcompany.com</span>
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">+91-0000000000</span>
+                                                    
+                                                    <div class="md-card-content">
+                                                        <span class="">
+                                                            <p class="uk-text-small uk-text-truncate uk-text-center uk-text-muted"><span class="uk-badge uk-badge-warning">Notice Period</span></p>
+                                                        </span>
+                                                        
+                                                        <br />
+                                                        <center>
+                                                            <button class="md-btn md-btn-wave md-btn-small md-btn-primary"><span class="uk-text-mini">View Profile</span></button>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--End of the one card -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!--End of overflow-->
         </section>
 
         <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
