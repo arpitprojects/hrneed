@@ -1,14 +1,3 @@
 {
-    "name": "hrneed",
-    "description": "HRIS",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Arpit Anand",
-            "email": "arpit.engghelp@gmail.com"
-        }
-    ],
-    "require": {
-        "cboden/ratchet": "0.3.*"
-    }
+    
 }
