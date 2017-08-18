@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hr Need</title>
+        <!--All meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="HRIS"/>
+        <meta property="og:site_name" content="hris"/>
+        <meta property="og:url" content="http://" />
+        <meta property="og:description" content="Human Resources Management System"/>
+        <meta property="og:type" content="website"/>
+        <meta property="article:author" content="" />
+        <meta property="og:image" content="http://" />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <!--All seo meta tags -->
+        <!--Link favicon used form ipl site-->
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <!--All icons-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <link href="../../assests/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
+        <!--End of the all icons-->
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+        <!-- All css-->
+        <link rel="stylesheet" href="../../assests/css/uikit.almost-flat.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/flags.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/style_switcher.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/main.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/themes_combined.min.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/modal.css" media="all"/>
+        <link rel="stylesheet" href="../../assests/css/dropify.min.css" media="all"/>
+        <!--End of All css-->
+        <!--Custom Css-->
+        <link rel="stylesheet" href="../../build/css/init.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/grid.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/main.css" media="all"/>
+        <link rel="stylesheet" href="../../build/css/media_queries.css" media="all"/>
+        <!--End of the custom css-->
+    </head>
+    <body id="body" class="sidebar_main_open sidebar_main_swipe">
+        <!-- main header -->
+        <!--Preloader-->
+
+        <!--End of the preloader markup-->
+        <header id="header_main">
+            <div class="header_main_content">
+                <nav class="uk-navbar">
+
+                    <!-- main sidebar switch -->
+                    <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
+                        <span class="sSwitchIcon"></span>
+                    </a>
+                    <!-- secondary sidebar switch -->
+                    <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
+                        <span class="sSwitchIcon"></span>
+                    </a> 
+                    <button class="pull-right md-wave" type="button" id="icon-btn1" data-toggle="modal" data-target="#myModal2">
+                        <i class="mdi mdi-24px mdi-help-circle-outline color-white"></i>
+                    </button>
+                </nav>
+            </div>
+            <div class="header_main_search_form">
+                <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+                <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
+                    <input type="text" class="header_main_search_input" />
+                    <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
+                    <script type="text/autocomplete">
+                    <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                        {{~items}}
+                        <li data-value="{{ $item.value }}">
+                            <a href="{{ $item.url }}" class="needsclick">
+                                {{ $item.value }}<br>
+                                <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                        </a>
+                        </li>
+                        {{/items}}
+                        </ul>
+                    </script>
+                </form>
+            </div>
+        </header><!-- main header end -->
+        <!-- main sidebar -->
+        <aside id="sidebar_main">
+
+            <div class="sidebar_main_header">
+                <!--some element deleted by me-->
+                <center>
+                    <img src="../../build/img/m_logo.png" id="logo-adjust" alt="logo" height="60" width="60" class="circle-ele"  />
+                </center>
+            </div>
+
+            <div class="menu_section">
+                <ul>
+
+                    <li title="Organisation">
+                        <a href="javascript:void(0)">
+                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
+                            <span class="menu_title">Organisation</span>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="companysettings()" class="side-btn">Company Profile</a></li>
+                            <li><a href="javascript:void(0)" onclick="departments()">Departments</a></li>
+                            <li><a href="javascript:void(0)">Designations</a></li>
+                            <li><a href="javascript:void(0)">Locations</a></li>
+                            <li><a href="javascript:void(0)">Groups</a></li>
+                            <li><a href="javascript:void(0)">Domains</a></li>
+                            <li><a href="javascript:void(0)">Rebranding</a></li>
+                            <li><a href="javascript:void(0)">Pay period Settings</a></li>
+                            <li><a href="javascript:void(0)">Hoilday Calender</a></li>
+                        </ul>
+
+                    </li>
+                    <li title="Employee">
+                        <a href="javascript:void(0)">
+                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
+                            <span class="menu_title">Employee</span>
+                        </a>
+                        <ul>
+                        <li><a href="javascript:void(0)" class="side-btn">Employee List</a></li>
+                            <li><a href="javascript:void(0)">Employee Profiles</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <br /><br /><br/ ><br />
+
+        <section id="depart-head-down">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 col-xs-10 col-lg-10 col-md-10 col-md-offset-2 col-lg-offset-2" id="mobile-view1">
+                        <p class="depart-head-text uk-text-small uk-text-muted pull-left">Total Users: </p>  
+                        <span class="pull-right">
+                            <div class="md-btn-group">
+                                <div class="uk-button-dropdown" id="group-btn" data-uk-dropdown="{mode:'click'}">
+                                    <button class="md-btn md-btn-mini dropdown-height-mini md-btn-primary md-btn-wave"><span>Add  <i class="mdi mdi-plus"></i></span> </button>
+                                    <div class="uk-dropdown">
+                                        <ul class="uk-nav uk-nav-dropdown">
+                                            <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal13">Invite User</a></li>
+                                            <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal14">Invite Multiple</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="uk-button-dropdown" id="group-btn" data-uk-dropdown="{mode:'click'}">
+                                    <button class="md-btn md-btn-mini dropdown-height-mini md-btn-wave"><span>Import <i class="text-head-btn material-icons">&#xE313;</i></span> </button>
+                                    <div class="uk-dropdown">
+                                        <ul class="uk-nav uk-nav-dropdown">
+                                            <li class="md-btn-wave"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal12">Import Users</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button id="btn1" onclick="toggle_list_grid()" class="md-btn md-btn-mini md-btn-primary md-btn-wave grid-button"><i class="mdi mdi-view-list"></i></button>
+                                <button id="btn2" onclick="toggle_grid_btn()" class="md-btn md-btn-mini md-btn-primary md-btn-wave display-none list-button"><i class="mdi mdi-view-grid"></i></button>
+                            </div>
+                        </span>
+                        <span class="clearfix"></span>
+                        <hr/>
+                        <div> 
+                            <div class="md-card display-none" id="list-view-employee">
+                                <div class="md-card-content">
+                                    <div class="uk-overflow-container uk-margin-bottom">
+                                        <table class="uk-table uk-table-align-vertical uk-table-nowrap tablesorter tablesorter-altair" id="ts_issues">
+                                            <thead>
+                                                <tr>
+                                                    <th class="uk-text-center">Image</th>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Role</th>
+                                                    <th>Date Of Joining</th>
+                                                    <th>Location</th>
+                                                    <th>Status</th>
+                                                    <th>Edit</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th class="uk-text-center">Image</th>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Role</th>
+                                                    <th>Date Of Joining</th>
+                                                    <th>Location</th>
+                                                    <th>Status</th>
+                                                    <th>Edit</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="uk-text-center"><span class="uk-text-small uk-text-muted uk-text-nowrap"><img src="http://placehold.it/200x200" class="img-responsive" height="45" width="45" alt="Person Image"/></span></td>
+                                                    <td>
+                                                        <a href=""> Arpit Name</a>
+                                                    </td>
+                                                    <td>name@name.com</td>
+                                                    <td><span class="uk-badge uk-badge-primary">Admin</span></td>
+                                                    <td class="uk-text-small">14/Jun/16</td>
+                                                    <td class="uk-text-small">Kolkata</td>
+                                                    <td><span class="uk-badge uk-badge-outline uk-text-upper">Active</span></td>
+                                                    <td class="pointer md-btn-wave center"><i class="mdi mdi-dots-vertical"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="uk-text-center"><span class="uk-text-small uk-text-muted uk-text-nowrap"><img src="http://placehold.it/200x200" class="img-responsive" height="45" width="45" alt="Person Image"/></span></td>
+                                                    <td>
+                                                        <a href="#!"> Your Name</a>
+                                                    </td>
+                                                    <td>arpit@name.com</td>
+                                                    <td><span class="uk-badge uk-badge-primary">Developer</span></td>
+                                                    <td class="uk-text-small">8/Jun/16</td>
+                                                    <td class="uk-text-small">Kolkata</td>
+                                                    <td><span class="uk-badge uk-badge-outline uk-text-upper">Resigned</span></td>
+                                                    <td class="pointer md-btn-wave center"><i class="mdi mdi-dots-vertical"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="uk-text-center"><span class="uk-text-small uk-text-muted uk-text-nowrap"><img src="http://placehold.it/200x200" class="img-responsive" height="45" width="45" alt="Person Image"/></span></td>
+                                                    <td>
+                                                        <a href="#!"> Your Name</a>
+                                                    </td>
+                                                    <td>arpit@name.com</td>
+                                                    <td><span class="uk-badge uk-badge-primary">Developer</span></td>
+                                                    <td class="uk-text-small">8/Jun/16</td>
+                                                    <td class="uk-text-small">Kolkata</td>
+                                                    <td><span class="uk-badge uk-badge-outline uk-text-upper">Resigned</span></td>
+                                                    <td class="pointer md-btn-wave center"><i class="mdi mdi-dots-vertical"></i></td>
+                                                </tr> <tr>
+                                                <td class="uk-text-center"><span class="uk-text-small uk-text-muted uk-text-nowrap"><img src="http://placehold.it/200x200" class="img-responsive" height="45" width="45" alt="Person Image"/></span></td>
+                                                <td>
+                                                    <a href="#!"> Your Name</a>
+                                                </td>
+                                                <td>arpit@name.com</td>
+                                                <td><span class="uk-badge uk-badge-primary">Developer</span></td>
+                                                <td class="uk-text-small">8/Jun/16</td>
+                                                <td class="uk-text-small">Kolkata</td>
+                                                <td><span class="uk-badge uk-badge-outline uk-text-upper">Resigned</span></td>
+                                                <td class="pointer md-btn-wave center"><i class="mdi mdi-dots-vertical"></i></td>
+                                                </tr> 
+
+                                                <tr>
+                                                    <td class="uk-text-center"><span class="uk-text-small uk-text-muted uk-text-nowrap"><img src="http://placehold.it/200x200" class="img-responsive" height="45" width="45" alt="Person Image"/></span></td>
+                                                    <td>
+                                                        <a href="#!"> Your Name</a>
+                                                    </td>
+                                                    <td>arpit@name.com</td>
+                                                    <td><span class="uk-badge uk-badge-primary">Developer</span></td>
+                                                    <td class="uk-text-small">8/Jun/16</td>
+                                                    <td class="uk-text-small">Kolkata</td>
+                                                    <td><span class="uk-badge uk-badge-outline uk-text-upper">Resigned</span></td>
+                                                    <td class="pointer md-btn-wave center"><i class="mdi mdi-dots-vertical"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <ul class="uk-pagination ts_pager">
+                                        <li data-uk-tooltip title="Select Page">
+                                            <select class="ts_gotoPage ts_selectize"></select>
+                                        </li>
+                                        <li class="first"><a href="javascript:void(0)"><i class="uk-icon-angle-double-left"></i></a></li>
+                                        <li class="prev"><a href="javascript:void(0)"><i class="uk-icon-angle-left"></i></a></li>
+                                        <li><span class="pagedisplay"></span></li>
+                                        <li class="next"><a href="javascript:void(0)"><i class="uk-icon-angle-right"></i></a></li>
+                                        <li class="last"><a href="javascript:void(0)"><i class="uk-icon-angle-double-right"></i></a></li>
+                                        <li data-uk-tooltip title="Page Size">
+                                            <select class="pagesize ts_selectize">
+                                                <option value="3">3</option>
+                                                <option value="5">5</option>
+                                                <option value="10" selected>10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="all">all</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!--End of md-card overflow-->
+                            <div id="grid-view-employee">
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                                        <div>
+                                            <div class="md-card md-card-hover">
+                                                <div class="md-card-head">
+                                                    <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                                        <i class="md-icon material-icons uk-text-muted">&#xE5D4;</i>
+                                                        <div class="uk-dropdown uk-dropdown-small">
+                                                            <ul class="uk-nav">
+                                                                <li><a href="#">Edit</a></li>
+                                                                <li><a href="#">Remove</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-text-center">
+                                                        <img class="img-responsive md-card-head-avatar" src="http://placehold.it/800x800 " alt=""/>
+                                                    </div>
+                                                    <h3 class="md-card-head-text uk-text-center uk-text-muted">
+                                                       Your Name                               <span class="uk-text-truncate uk-text-muted">Data Scientist</span>
+                                                    </h3>
+                                                    
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">name@yourcompany.com</span>
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">+91-0000000000</span>
+                                                    <br />
+                                                    <div class="md-card-content">
+                                                        <span class="">
+                                                            <p class="uk-text-small uk-text-truncate uk-text-center uk-text-muted"><span class="uk-badge uk-badge-primary">Active</span></p>
+                                                        </span>
+                                                        
+                                                        <br />
+                                                        <center>
+                                                            <button class="md-btn md-btn-wave md-btn-small md-btn-primary"><span class="uk-text-mini">View Profile</span></button>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                            </div>
+                                        </div>
+                                    </div><!--End of the one card -->
+                                       <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                                        <div>
+                                            <div class="md-card md-card-hover">
+                                                <div class="md-card-head">
+                                                    <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-right'}">
+                                                        <i class="md-icon material-icons uk-text-muted">&#xE5D4;</i>
+                                                        <div class="uk-dropdown uk-dropdown-small">
+                                                            <ul class="uk-nav">
+                                                                <li><a href="#">Edit</a></li>
+                                                                <li><a href="#">Remove</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-text-center">
+                                                        <img class="img-responsive md-card-head-avatar" src="http://placehold.it/800x800 " alt=""/>
+                                                    </div>
+                                                    <h3 class="md-card-head-text uk-text-center uk-text-muted">
+                                                       Your Name                               <span class="uk-text-truncate uk-text-muted">Data Scientist</span>
+                                                    </h3>
+                                                    
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">name@yourcompany.com</span>
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">+91-0000000000</span>
+                                                    <br />
+                                                    <div class="md-card-content">
+                                                        <span class="">
+                                                            <p class="uk-text-small uk-text-truncate uk-text-center uk-text-muted"><span class="uk-badge uk-badge-danger">Resigned</span></p>
+                                                        </span>
+                                                        
+                                                        <br />
+                                                        <center>
+                                                            <button class="md-btn md-btn-wave md-btn-small md-btn-primary"><span class="uk-text-mini">View Profile</span></button>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                            </div>
+                                        </div>
+                                    </div><!--End of the one card -->
+                                       <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                                        <div>
+                                            <div class="md-card md-card-hover">
+                                                <div class="md-card-head">
+                                                    <div class="md-card-head-menu" data-uk-dropdown="{pos:'bottom-left'}">
+                                                        <i class="md-icon material-icons uk-text-muted">&#xE5D4;</i>
+                                                        <div class="uk-dropdown uk-dropdown-small">
+                                                            <ul class="uk-nav">
+                                                                <li><a href="#">Edit</a></li>
+                                                                <li><a href="#">Remove</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uk-text-center">
+                                                        <img class="img-responsive md-card-head-avatar" src="http://placehold.it/800x800 " alt=""/>
+                                                    </div>
+                                                    <h3 class="md-card-head-text uk-text-center uk-text-muted">
+                                                       Your Name                               <span class="uk-text-truncate uk-text-muted">Data Scientist</span>
+                                                    </h3>
+                                                    
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">name@yourcompany.com</span>
+                                                    <span class="uk-text-small uk-text-truncate uk-text-center uk-text-muted">+91-0000000000</span>
+                                                    <br/>
+                                                    <div class="md-card-content">
+                                                        <span class="">
+                                                            <p class="uk-text-small uk-text-truncate uk-text-center uk-text-muted"><span class="uk-badge uk-badge-warning">Notice Period</span></p>
+                                                        </span>
+                                                        
+                                                        <br />
+                                                        <center>
+                                                            <button class="md-btn md-btn-wave md-btn-small md-btn-primary"><span class="uk-text-mini">View Profile</span></button>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                            </div>
+                                        </div>
+                                    </div><!--End of the one card -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--End of overflow-->
+        </section>
+
+        <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Help Center</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close-circle-outline mdi-18px pink-diff"></i></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>
+                            Coming Soon
+                        </p>
+                    </div> 
+
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div class="modal right fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document" id="custom-modal-600" >
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+                    <div class="modal-body" >
+                        <p class="uk-text-small uk-text-muted font-size-14">Wizard Menu </p>
+                        <br /><br />
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <pre>*Only Csv/xslx file required</pre>
+                                <div class="md-card">
+                                    <div class="md-card-content">
+                                        <input type="file" id="input-file-e" class="dropify" data-max-file-size="200K" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Analyse</a>
+
+                        </div>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div class="modal right fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document" id="custom-modal-600" >
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+                    <div class="modal-body" >
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                            <p class="uk-text-muted font-size-12">Fill in the mandatory fields, and click invite. User gets email invitation sent to the email id mentioned. Once the invitation is accepted, the user becomes part of the organization</p>
+                        </div>
+                        <br />  <br /><br/>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-account-plus login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Employee Id<span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-account-plus login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">First Name <span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-account-plus login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Last Name<span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div> 
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-12 col-md-8 col-lg-8 col-xs-12">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-email login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Email <span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Add</a>
+
+                        </div>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <div class="modal right fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document" id="custom-modal-600" >
+                <div class="modal-content">
+                    <br /><hr/><!--To avoid upper margin-->
+                    <div class="modal-header" id="modal-help-header">
+                        <h4 class="modal-title pull-left light-light-grey" id="myModalLabel2">Modify Settings</h4>
+                        <button type="button" id="icon-btn" class="close pull-right" data-dismiss="modal" aria-label="Close"><i class="mdi mdi-close mdi-18px pink-diff"></i></button>
+                    </div>
+                    <div class="modal-body" >
+                        <p class="uk-text-small uk-text-muted font-size-14">Enter multiple email ids separated by comma. Users get email invitations to their email id's and will become part of the organization once they accept the invitation. </p>
+                        <br /><br />
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-email-open-outline login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Employee Email ids <span class="uk-text-danger">*</span></label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+
+                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Add Multiple</a>
+
+                        </div>
+                    </div>
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div><!-- modal -->
+        <!--End of modal markups of this page-->
+        <script src="../../assests/js/common.min.js"></script>
+        <script src="../../assests/js/uikit_custom.min.js"></script>
+        <script src="../../assests/js/altair_admin_common.min.js"></script>
+        <script src="../../assests/js/modal.js"></script>
+        <script src="../../assests/js/dropify.min.js"></script>
+        <script src="../../assests/js/perfect-scrollbar.min.js"></script>
+        <script src="../../assests/js/dragula.min.js"></script>
+        <script src="../../assests/js/jquery.tablesorter.min.js"></script>
+        <script src="../../assests/js/widget-alignChar.min.js"></script>
+        <script src="../../assests/js/jquery.tablesorter.widgets.min.js"></script>
+        <script src="../../assests/js/jquery.tablesorter.pager.min.js"></script>
+        <script src="../../build/js/ajax.js"></script>
+        <script src="../../build/js/init.js"></script>
+        <script src="../../build/js/build.js"></script>
+    </body>
+</html>

@@ -294,4 +294,14 @@ $(document).ready(function(){
 });
 
 
-
+$(function(){
+    altair_form_adv.masked_inputs();
+})
+altair_form_adv = {
+  masked_inputs: function() {
+        $maskedInput = $('.masked_input');
+        if($maskedInput.length) {
+            $maskedInput.inputmask();
+        }
+    }
+};

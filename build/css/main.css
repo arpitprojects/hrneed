@@ -487,3 +487,16 @@ font-size-15{
 .padding-bottom-0{
     padding-bottom:0 !important;
 }
+.user_heading{
+    padding-bottom: 0 !important;
+}
+.mdi-close-circle-outline{
+    position:relative;
+    top:5px;
+}
+.padding-2{
+    padding:2% !important;
+}
+.uk-sticky-placeholder .uk-active{
+    z-index:99 !important;
+}

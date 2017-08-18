@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "dragula": "^3.7.2",
+    "handlebars": "^4.0.10",
     "izimodal": "^1.5.0"
   }
 }
