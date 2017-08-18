@@ -8,13 +8,14 @@
     #side-border{
         overflow:hidden!important;
     }
+     #custom-modal-600{
+        width:80%;
+    }
 
 }
 @media all and (min-width : 767px){
     #depart-head-down{
         /*        margin-left:20%;*/
     }
-    #custom-modal-600{
-        width:80%;
-    }
+   
 }
