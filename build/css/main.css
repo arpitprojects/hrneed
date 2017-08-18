@@ -187,7 +187,7 @@ body{
 }
 /*MODAL SECOND*/
 #custom-modal-600{
-    width:600px;
+   width:47%;
 }
 .modal.left .modal-dialog1,
 .modal.right .modal-dialog1 {
@@ -498,5 +498,5 @@ font-size-15{
     padding:2% !important;
 }
 .uk-sticky-placeholder .uk-active{
-    z-index:99 !important;
+    z-index:99 !important;  
 }
