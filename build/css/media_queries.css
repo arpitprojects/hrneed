@@ -19,6 +19,10 @@
     .modal.right .modal-dialog1{
         width:80%;
     }
+    .modal.left .modal-dialog,
+    .modal.right .modal-dialog{
+        width:80%;
+    }
 
 }
 @media all and (min-width : 767px){
