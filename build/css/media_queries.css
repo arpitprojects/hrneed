@@ -11,6 +11,10 @@
      #custom-modal-600{
         width:80%;
     }
+    #side-border{
+        border:none !important;
+        border:0 !important;
+    }
 
 }
 @media all and (min-width : 767px){
