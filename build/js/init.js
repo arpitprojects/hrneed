@@ -263,7 +263,7 @@ function displayMapAt(lat, lon, zoom) {
         + "&amp;spn=0.199154,0.399727&amp;t=m&amp;z="
         + zoom + "\"" + "></iframe>");
 }
-
+//End of to be used later
 
 function toggle_list_grid(){
     //var flag = 0;
