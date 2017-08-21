@@ -69,7 +69,6 @@ $(document).ready(function(){
 
     if($(window).width() < 767){
         $('#companysettings-second-col').addClass('col-sm-offset-2').addClass('col-xs-offset-2');
-        $('#mobile-view1').addClass('col-sm-offset-2').addClass('col-xs-offset-2');
     }else{
         //
     } 
