@@ -10,7 +10,9 @@ body{
 .palete-color{
     color:#1976d2!important;
 }
-
+.height-auto{
+    height:auto;
+}
 #card{
     box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22), 0 25px 55px 0 rgba(0,0,0,0.21);
     border-radius:2px;
