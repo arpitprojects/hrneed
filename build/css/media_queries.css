@@ -15,6 +15,10 @@
         border:none !important;
         border:0 !important;
     }
+    .modal.left .modal-dialog1,
+    .modal.right .modal-dialog1{
+        width:80%;
+    }
 
 }
 @media all and (min-width : 767px){
