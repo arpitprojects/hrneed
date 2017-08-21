@@ -26,12 +26,6 @@
     #mobile-view1{
         margin-left:20%;
     }
-
-    .col-sm-4 , col-sm-3{
-        margin-top:5%;
-        text-align: center;
-
-    }
 }
 @media all and (min-width : 767px){
     #depart-head-down{

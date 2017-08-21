@@ -1,0 +1,48 @@
+1.) For Admin, there will be alll the tabs and for  normal employees there will be tabs in restricted.
+2.)We can provide permissions in the permission tab that liberty will be to the admin only.
+
+Admin : all permissions. - there will be super admin who will cutomise everything.
+
+
+EMPLOYEE
+a.) Employee > employeelist - both grid and list manner.
+
+b.) Click on the profile, we go to view_profile page.
+
+c.) Perfomance. *need to consider all the available prototypes.
+e.g appriasal.
+features like anonymous.
+
+-> Report Application tab.
+
+
+d.) Attendence - calender format, list format , 
+analytics format, 
+Also each employeewise and bulk employeewise.   
+
+
+On the settings tab we have to set all adding and edit option 
+		OR
+on each column we have a settings tab.
+
+5.) Separate analytics tab for analysing
+
+6.) 
+
+-> ORGANISATION
+a.) Departments,all departments.
+b.) Designations,all designations .
+c) location.
+d.) Domain - that will be added when adding user for the employee profiles.
+e) 
+
+E.g) If admin is filling the employee, that he would be selecting the department but he should have to set the organisation department first.
+
+7.) Apply leave, people can request for it.
+
+8.) Files uploading there would be oprion for employee one extra tab for company files.
+or settings tab  | categories tab will be there.
+may be employee based role based.
+9.) Unlike ZOHO we dont need data administration - export history, import history.
+Integration - web forms, zoho people api, services.
+10.) Acess Control Tab > Roles ,  Permission , Allowed Ips , Geo Restriction
