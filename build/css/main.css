@@ -517,6 +517,9 @@ font-size-15{
 .padding-2{
     padding:2% !important;
 }
+.padding-left-4{
+   padding-left :4% !important;
+}
 .padding-bottom-0{
     padding-bottom: 0px !important;
 }
@@ -532,32 +535,46 @@ font-size-15{
 }
 /* dropdown css */
 .tab-container{
-    width:60%;
-    margin:100px auto auto auto;
+    width:100%;
+    margin: auto auto auto;
 }
 
 .tabs{
     height: 30px;
-    line-height: 30px;
 }
 
 .tabs .tab {
     display:inline-block;
     cursor:pointer;
-    width:100px;
+    width:auto;
     text-align:center;
+    margin-left:3%;
 }
 
 .tabs .active {
-    background-color: #efefef
+    border-bottom: 2px solid #2196f3;
 }
 
 .tab-panes .tab-pane{
-    border:1px solid #333333;
-    width:400px;
-    padding:20px;
-    display: none
+    display: none;
 }
 .tab-panes .active{
-    display: block
+    display: block;
+}
+a.tab{
+    color:#333;
+}
+#profile-modal{
+    position: relative;
+    left: -20px;
+}
+/*
+#uk-nav li{
+    margin-bottom: 2px
+}*/
+#uk-nav  li a:hover{
+    background-color: #fff !important;
+}
+#uk-nav  li a.active{
+    background-color: #fff !important;
 }
