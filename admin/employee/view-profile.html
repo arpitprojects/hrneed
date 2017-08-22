@@ -71,15 +71,15 @@
                     <input type="text" class="header_main_search_input" />
                     <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
                     <script type="text/autocomplete">
-                    <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
-                        {{~items}}
-                        <li data-value="{{ $item.value }}">
-                            <a href="{{ $item.url }}" class="needsclick">
-                                {{ $item.value }}<br>
-                                <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                        <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                            {{~items}}
+                            <li data-value="{{ $item.value }}">
+                                <a href="{{ $item.url }}" class="needsclick">
+                                    {{ $item.value }}<br>
+                                    <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
                         </a>
                         </li>
-                        {{/items}}
+                            {{/items}}
                         </ul>
                     </script>
                 </form>
@@ -138,17 +138,7 @@
                         <div class="md-card">
                             <div class="user_heading">
                                 <div class="user_heading_menu hidden-print">
-                                    <!--
-<div class="uk-display-inline-block" data-uk-dropdown="{pos:'left-top'}">
-<i class="md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
-<div class="uk-dropdown uk-dropdown-small">
-<ul class="uk-nav">
-<li><a href="#">Edit</a></li>
-<li><a href="#">Delete</a></li>
-</ul>
-</div>
-</div>
--->
+
                                     <div class="uk-display-inline-block"><i class="md-icon md-icon-light material-icons uk-text-muted" id="page_print">&#xE8ad;</i></div>
                                 </div>
                                 <div class="user_heading_avatar">
@@ -174,11 +164,21 @@
                                     <li class=""><a href="#">Details</a></li>
                                     <li><a href="#">Work Experience</a></li>
                                     <li><a href="#">Education</a></li>
-                                    <li><a href="#">Training</a></li>
-                                    <li><a href="#">Expenses</a></li>
-                                    <li><a href="#">Dependent</a></li>
-                                    <li><a href="#">Exit Details</a></li>
-                          
+                                    <li><a href="#">Attendence</a></li>
+                                    <li><a href="#">Goals</a></li>
+                                    <li><a href="#">Performance</a></li>
+                                    <li><a href="#">Equipments</a></li>
+                                    <div class="uk-button-dropdown" data-uk-dropdown>
+                                        <i class="md-icon material-icons md-icon-light  uk-text-muted">expand_more</i>
+                                        <div class="uk-dropdown">
+                                            <ul class="uk-nav uk-nav-dropdown">
+                                                <li><a href="#">Training</a></li>
+                                                <li><a href="#">Expenses</a></li>
+                                                <li><a href="#">Dependent</a></li>
+                                                <li><a href="#">Exit Details</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </ul>
                                 <ul id="user_profile_tabs_content" class="uk-switcher uk-margin">
                                     <li>
@@ -282,6 +282,20 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-sm-12 col-xs-12 col-md-10 col-sm-10">
+                                            <div class="md-card-content padding-bottom-1 border-bottom-1">
+
+                                                <ul class="md-list">
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="uk-text-muted uk-display-block font-weight-500 uk-text-medium font-size-14 padding-bottom-1">Job Description</span>
+                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et auctor odio, ac porta elit. Quisque eleifend purus sem, vitae faucibus mi vestibulum nec.  </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
                                         <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
                                             <div class="md-card-content">
                                                 <ul class="md-list">
@@ -303,6 +317,15 @@
                                                             <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">dd mm yyyy</span>
                                                         </div>
                                                     </li>
+
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
+                                            <div class="md-card-content">
+                                                <ul class="md-list">
                                                     <li>
                                                         <div class="md-list-content">
                                                             <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Martial Status</span>
@@ -315,42 +338,10 @@
                                                             <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">Flat no 4 , Janakpuri West.</span>
                                                         </div>
                                                     </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-sm-12 col-xs-12 col-md-5 col-sm-5">
-                                            <div class="md-card-content">
-                                                <ul class="md-list">
                                                     <li>
                                                         <div class="md-list-content">
                                                             <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Expertise</span>
                                                             <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Data Analytics</span>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="md-list-content">
-                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Job Description</span>
-                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">12 June 2016</span>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="md-list-content">
-                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Equipment Provided</span>
-                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">12 June 2016</span>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="md-list-content">
-                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Serial Number</span>
-                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">12 June 2016</span>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="md-list-content">
-                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Date when provided</span>
-                                                            <span class="md-list-heading uk-text-large font-size-15 uk-text-muted font-weight-200 uk-text-success">12 June 2016</span>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -435,6 +426,18 @@
                                             </table>
                                         </div>
                                     </li>
+                                    <li>
+
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                    <li>
+                                    </li>
+                                    <li>
+                                    </li>
+                                </ul>
+                                <ul id="user_profile_tabs_content" class="uk-switcher uk-margin">
                                     <li>
                                         <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
                                             <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal24" data-uk-dropdown="{pos:'left-top'}">
@@ -538,6 +541,14 @@
                                                         <td class="uk-text-muted font-size-14">2600/-</td>
                                                         <td class="uk-text-muted font-size-14">N.A</td>
                                                     </tr>
+                                                    <tr>
+                                                        <td class="uk-text-muted font-size-14">Hotel Stay</td>
+                                                        <td class="uk-text-muted font-size-14">1 Nov 2016</td>
+                                                        <td class="uk-text-muted font-size-14">8 Nov 2016</td>
+                                                        <td class="uk-text-muted font-size-14">Hotel </td>
+                                                        <td class="uk-text-muted font-size-14">800/-</td>
+                                                        <td class="uk-text-muted font-size-14">N.A</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -616,7 +627,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="md-list-content">
-                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Separation Date </span>
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Separation Date</span>
                                                             <span class="md-list-heading uk-text-large font-weight-200 uk-text-success">2 August 2017</span>
                                                         </div>
                                                     </li>
@@ -648,7 +659,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="md-list-content">
-                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Eqipment Return</span>
+                                                            <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Equipment Return</span>
                                                             <span class="md-list-heading uk-text-large uk-text-success font-weight-200">None</span>
                                                         </div>
                                                     </li>
@@ -1008,8 +1019,17 @@
                                     <input class="md-input masked_input" id="masked_date" type="text" data-inputmask="'alias': 'mm/dd/yyyy'" data-inputmask-showmaskonhover="false" />
                                 </div>
                                 <br />
-                                <div class="uk-input-group">
 
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12 col-md-6">
+                                <div class="uk-input-group">
+                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-etsy login-icon-font-size"></i></span>
+                                    <label class="uk-text-small uk-text-muted">Expertise</label>
+                                    <input type="text" class="md-input" />
+                                </div>
+                                <br />
+
+                                <div class="uk-input-group">
                                     <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-gender-male-female login-icon-font-size"></i></span>
 
                                     <select id="select_demo_5" data-md-selectize data-md-selectize-bottom data-uk-tooltip="{pos:'top'}" title="Select with tooltip">
@@ -1027,49 +1047,25 @@
                                     <input type="text" class="md-input" />
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12 col-md-6">
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-etsy login-icon-font-size"></i></span>
-                                    <label class="uk-text-small uk-text-muted">Expertise</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                                <br />
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
                                 <div class="uk-input-group">
                                     <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-file-chart login-icon-font-size"></i></span>
                                     <label class="uk-text-small uk-text-muted">Job Description</label>
                                     <input type="text" class="md-input" />
                                 </div>
-                                <br />
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-laptop login-icon-font-size"></i></span>
-                                    <label class="uk-text-small uk-text-muted">Equipment Provided</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                                <br />
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-file-chart login-icon-font-size"></i></span>
-                                    <label class="uk-text-small uk-text-muted">Serial no </label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                                <br />
-                                  <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-timer login-icon-font-size"></i></span>
-                                    <label for="masked_date">Date when provided</label>
-                                    <input class="md-input masked_input" id="masked_date" type="text" data-inputmask="'alias': 'mm/dd/yyyy'" data-inputmask-showmaskonhover="false" />
-                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3">
+                        <br /><br />
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Save</a>
 
-                            <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-medium md-btn-wave-light waves-effect waves-button waves-light md-btn-block">Save</a>
-
+                            </div>
                         </div>
-                    </div>
-                </div><!-- modal-content -->
-            </div><!-- modal-dialog -->
-        </div><!-- modal -->
+                    </div><!-- modal-content -->
+                </div><!-- modal-dialog -->
+            </div><!-- modal -->
+        </div>
         <div class="modal right fade" id="myModal22" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
             <div class="modal-dialog" role="document" id="custom-modal-600" >
                 <div class="modal-content">
@@ -1083,7 +1079,11 @@
                         <div data-dynamic-fields="field_template_b1"></div>
                         <script id="field_template_b1" type="text/x-handlebars-template">
 <div class="form_section">
-
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+        <span class="uk-input-group-addon pull-right">
+            <a href="#" class="btnSectionClone"><i class="material-icons md-24">&#xE146;</i></a>
+                            </span>  
+                            </div>
     <div class="col-sm-12 col-xs-12 col-lg-6 col-md-6">
         <div class="uk-input-group">
             <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-city login-icon-font-size"></i></span>
@@ -1097,11 +1097,6 @@
             <input class="md-input masked_input" id="masked_date" type="text" data-inputmask="'alias': 'mm/dd/yyyy'" data-inputmask-showmaskonhover="false" />
                             </div>
         <br />
-        <div class="uk-input-group">
-            <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-city login-icon-font-size"></i></span>
-            <label for="d_form_input{{counter}}">Job Description</label>
-            <input type="text" class="md-input" name="d_form_input{{counter}}" id="d_form_input{{counter}}">
-                            </div>
                             </div>
     <div class="col-sm-12 col-xs-12 col-lg-6 col-md-6">
         <div class="uk-input-group">
@@ -1117,13 +1112,15 @@
                             </div>
                             </div>
     <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-        <span class="uk-input-group-addon pull-right">
-            <a href="#" class="btnSectionClone"><i class="material-icons md-24">&#xE146;</i></a>
-                            </span>  
+        <div class="uk-input-group">
+            <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-city login-icon-font-size"></i></span>
+            <label for="d_form_input{{counter}}">Job Description</label>
+            <input type="text" class="md-input" name="d_form_input{{counter}}" id="d_form_input{{counter}}">
                             </div>
+                            </div>
+                    <br/><hr/>
                             </div>
                         </script>
-
                         <div class="row">
                             <div class="col-sm-6 col-sm-offset-3">
                                 <br /><br /><br />
@@ -1443,5 +1440,6 @@
             // load parsley config (altair_admin_common.js)
             altair_forms.parsley_validation_config();
         </script>
+
     </body>
 </html>

@@ -45,4 +45,5 @@ or settings tab  | categories tab will be there.
 may be employee based role based.
 9.) Unlike ZOHO we dont need data administration - export history, import history.
 Integration - web forms, zoho people api, services.
-10.) Acess Control Tab > Roles ,  Permission , Allowed Ips , Geo Restriction
+10.) Acess Control Tab > Roles ,  Permission , Allowed Ips , Geo Restriction.
+11.)
