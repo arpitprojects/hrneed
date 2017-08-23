@@ -33,3 +33,17 @@
     }
 
 }
+
+@media all and (max-width : 767px){
+    .view-profile-page-desktop{
+        display: none;
+    }
+    .view-profile-page-mobile{
+        display:block;
+    }
+}
+@media all and (min-width : 767px){
+    .view-profile-page-mobile{
+        display:none;
+    }
+}
