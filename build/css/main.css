@@ -624,3 +624,14 @@ table::-webkit-scrollbar-thumb
 	border: 3px solid #fff;
 	background-color: rgba(0, 0, 0, .3);
 }
+.job-desc-icon{
+    position: relative;
+    left: 19px;
+}
+.ul-work-adjust li{
+   margin-left:16%;
+}
+.ul-work-adjust{
+    position:relative;
+    left:-28px;
+}
