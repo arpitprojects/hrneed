@@ -4,6 +4,9 @@ body,html{
 
 
 } 
+.font-family{
+       font-family: 'Roboto' ,'Lato' , sans-serif !important; 
+}
 body{
     overflow-y: hidden;
 }
@@ -640,4 +643,37 @@ table::-webkit-scrollbar-thumb
 }
 .border-content-border{
     border-bottom:1px solid rgba(0,0,0,0.12) !important;
+}
+.btn-mini{
+    height:35px;
+    width:35px;
+    border-radius:50%;
+    position:relative;
+    top:12px;
+    background-color:;
+    color:white!important;
+}
+.btn-mini i{
+    position:relative;
+    top:-13px;
+}
+.uk-accordion-alt .uk-accordion-content{
+    padding-top:0 !important;
+}
+.chat_box_wrapper{
+    height:375px;
+    border: 1px solid rgba(0,0,0,.12);
+    background-color:#eee;
+}
+.font-size-10{
+    font-size:10.5px !important;
+}
+.font-size-9{
+    font-size:9px !important;
+}
+.md-card+.md-card, .md-card+.uk-grid, .uk-grid+.md-card{
+    margin-top:0 !important;
+}
+.font-size-18{
+    font-size:18px !important;
 }
