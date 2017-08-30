@@ -1,6 +1,6 @@
 function companysettings(){
     $.ajax({
-        url : 'organisation/companysettings.html',
+        url : '../organisation/companysettings.html',
         type : 'GET',
         dataType : 'text',
         success  : function(data){
@@ -18,7 +18,7 @@ function companysettings(){
 }
 function departments(){
     $.ajax({
-        url : 'organisation/departments.html',
+        url : '../organisation/departments.html',
         type : 'GET',
         dataType : 'text',
         success  : function(data){

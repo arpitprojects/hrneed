@@ -677,3 +677,11 @@ table::-webkit-scrollbar-thumb
 .font-size-18{
     font-size:18px !important;
 }
+#uk-nav li{
+    margin-bottom: 2%;
+    
+}
+.row-reset{
+    margin-right:0 !important;
+    margin-left:0 !important;
+}
