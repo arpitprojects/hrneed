@@ -685,3 +685,12 @@ table::-webkit-scrollbar-thumb
     margin-right:0 !important;
     margin-left:0 !important;
 }
+.period{
+    letter-spacing: 1px;
+    font-size:18px;
+    font-weight:700;
+    margin-left:2px;
+}
+.scroll-box{
+    overflow-x: scroll !important;
+}
