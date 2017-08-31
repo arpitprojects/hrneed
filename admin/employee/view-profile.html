@@ -162,14 +162,15 @@
                                     </div>
                                     <!--All the responsive tabs goes here-->
                                     <div class="md-card-content">
-                                        <center>
-                                            <ul class="uk-tab center" data-uk-tab="{connect:'#tabs_anim1', animation:'scale'}">
+                                        <center class="col-sm-12">
+                                            
+                                            <ul class="uk-tab" data-uk-tab="{connect:'#tabs_anim1', animation:'scale'}">
                                                 <li class="uk-active"><a href="#">About</a></li>
                                                 <li><a href="#">Details</a></li>
                                                 <li><a href="#">Work Experience</a></li>
                                                 <li><a href="#">Education</a></li>
                                                 <li><a href="#">Attendance</a></li>
-                                                <li><a href="#">Goal</a></li>
+                                                <li><a href="#">Goals</a></li>
                                                 <li><a href="#">Equipments</a></li>
                                                 <li><a href="#">Training</a></li>
                                                 <li><a href="#">Expenses</a></li>
@@ -488,36 +489,31 @@
                                                     </div>
 
                                                 </li>
+                                                
+                                                
                                                 <li>
-
+                                                    <!--Attendance tab-->
                                                 </li>
+                                                
+                                                
                                                 <li>
                                                     <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
-                                                        <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal30" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
+                                                        <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal30" id="profile-modal">
                                                             <a class="md-fab md-fab-success btn-mini md-fab-wave-light" href="javascript:void(0)"><i class="material-icons font-size-18">add</i></a>
-
-                                                            <div class="uk-dropdown uk-dropdown-small display-none">
-                                                                <ul class="uk-nav">
-                                                                    <li><a href="#">Add</a></li>
-                                                                    <li><a href="#">Edit</a></li>
-                                                                </ul>
-                                                            </div>
                                                         </div>
-
                                                     </div>
                                                     <br /><br /><br />
-                                                    <div class="col-sm-12 col-xs-12 col-md-6 col-sm-6  md-card margin-bottom-1">
+                                                    <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12 margin-bottom-1">
                                                         <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
-                                                            <br/>
-                                                            <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal29" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
-                                                                <i class="md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
-                                                                <div class="uk-dropdown uk-dropdown-small display-none">
-                                                                    <ul class="uk-nav">
-                                                                        <li><a href="#">Add</a></li>
-                                                                        <li><a href="#">Edit</a></li>
-                                                                    </ul>
-                                                                </div>
+                                                            <div class="pull-right goal-icon-mobile" data-toggle="modal" data-target="#myModal29" id="profile-modal">
+                                                                <i  class="md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
                                                             </div>
+                                                            <div class="pull-left">
+                                                                <span data-uk-filter="label-1" id="goal_no">
+                                                                    <span class="uk-badge uk-badge-primary">Goal 1</span>
+                                                                </span>
+                                                            </div>
+                                                            <span class="clearfix"></span>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="md-card-content border-content-border">
@@ -525,7 +521,7 @@
                                                                     <li>
                                                                         <div class="md-list-content">
                                                                             <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Goal Title</span>
-                                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Development finish.</span>
+                                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Development finish</span>
                                                                         </div>
                                                                     </li>
                                                                 </ul>
@@ -549,7 +545,7 @@
                                                                     <li>
                                                                         <div class="md-list-content">
                                                                             <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Goal Description</span>
-                                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Common goal for everyone in the office.</span>
+                                                                            <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Common goal for everyone in the office, need to finish it before the target date,might be helpful for now,Common goal for everyone in the office, need to finish it before the target date,might be helpful for now </span>
                                                                         </div>
                                                                     </li>
                                                                 </ul>
@@ -599,14 +595,14 @@
                                                                     <li>
                                                                         <div class="md-list-content">
                                                                             <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Priority</span>
-                                                                            <span class="md-list-heading uk-text-large uk-text-danger font-weight-200 uk-text-danger">High</span>
+                                                                            <span class="md-list-heading uk-text-large uk-text-danger font-weight-200">High</span>
                                                                         </div>
                                                                     </li>
+
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!--Second card card-->
                                                 </li>
                                                 <li>
                                                     <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12 uk-margin-top">
@@ -981,7 +977,7 @@
 
                                             <div class="uk-button-dropdown" data-uk-dropdown>
 
-                                                <a href="#" class="font-size-15 uk-text-muted" id="more-btn-profile">More<span class="period">...</span></a>
+                                                <a href="#" class="font-size-15 uk-text-muted" id="more-btn-profile">More<span class="period uk-text-muted">...</span></a>
 
                                                 <div class="uk-dropdown uk-dropdown-small">
                                                     <ul class="uk-nav uk-nav-dropdown" id="uk-nav">
@@ -1326,7 +1322,7 @@
                                                 <!--All the goal works here-->
                                                 <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
                                                     <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal30" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
-                                                        <a class="md-fab md-fab-success btn-mini md-fab-wave-light" href="javascript:void(0)"><i class="material-icons font-size-18">add</i></a>
+                                                        <a style="right:17px; top:9px;!important;" class="md-fab md-fab-success btn-mini md-fab-wave-light" href="javascript:void(0)"><i class="material-icons font-size-18">add</i></a>
 
                                                         <div class="uk-dropdown uk-dropdown-small display-none">
                                                             <ul class="uk-nav">
@@ -1338,7 +1334,7 @@
 
                                                 </div>
                                                 <br /><br /><br />
-                                                <div class="col-sm-12 col-xs-12 col-md-6 col-sm-6  md-card margin-bottom-1">
+                                                <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12  md-card margin-bottom-1">
                                                     <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
                                                         <br/>
                                                         <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal29" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
@@ -1350,8 +1346,15 @@
                                                                 </ul>
                                                             </div>
                                                         </div>
+                                                        <div class="pull-left">
+                                                            <li data-uk-filter="label-1" id="goal_no">
+                                                                <a href="#"><span class="uk-badge uk-badge-primary">Goal 1</span></a>
+                                                            </li>
+                                                        </div>
+                                                        <span class="clearfix"></span>
+
                                                     </div>
-                                                 <div class="col-sm-6">
+                                                    <div class="col-sm-6">
                                                         <div class="md-card-content border-content-border">
                                                             <ul class="md-list">
                                                                 <li>
@@ -1382,7 +1385,7 @@
                                                                 <li>
                                                                     <div class="md-list-content">
                                                                         <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Goal Description</span>
-                                                                        <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Common goal for everyone in the office.</span>
+                                                                        <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Common goal for everyone in the office, need to finish it before the target date,might be helpful for now,Common goal for everyone in the office, need to finish it before the target date,might be helpful for now </span>
                                                                     </div>
                                                                 </li>
                                                             </ul>
@@ -1432,14 +1435,124 @@
                                                                 <li>
                                                                     <div class="md-list-content">
                                                                         <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Priority</span>
-                                                                        <span class="md-list-heading uk-text-large uk-text-danger font-weight-200 uk-text-danger">High</span>
+                                                                        <span class="md-list-heading uk-text-large uk-text-danger font-weight-200">High</span>
                                                                     </div>
                                                                 </li>
+
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!--Second card card-->
+                                                <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12  md-card margin-bottom-1">
+                                                    <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
+                                                        <br/>
+                                                        <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal29" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
+                                                            <i class="md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
+                                                            <div class="uk-dropdown uk-dropdown-small display-none">
+                                                                <ul class="uk-nav">
+                                                                    <li><a href="#">Add</a></li>
+                                                                    <li><a href="#">Edit</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pull-left">
+                                                            <li data-uk-filter="label-1" id="goal_no">
+                                                                <a href="#"><span class="uk-badge uk-badge-primary">Goal 2</span></a>
+                                                            </li>
+                                                        </div>
+                                                        <span class="clearfix"></span>
+
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="md-card-content border-content-border">
+                                                            <ul class="md-list">
+                                                                <li>
+                                                                    <div class="md-list-content">
+                                                                        <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Goal Title</span>
+                                                                        <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Lorem ipsum</span>
+                                                                    </div>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="md-card-content border-content-border">
+                                                            <ul class="md-list">
+                                                                <li>
+                                                                    <div class="md-list-content">
+                                                                        <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Goal Type</span>
+                                                                        <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Common</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <div class="md-card-content border-content-border">
+                                                            <ul class="md-list">
+                                                                <li>
+                                                                    <div class="md-list-content">
+                                                                        <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Goal Description</span>
+                                                                        <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Common goal for everyone in the office, need to finish it before the target date,might be helpful for now,Common goal for everyone in the office, need to finish it before the target date,might be helpful for now </span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>    
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="md-card-content border-content-border">
+                                                            <ul class="md-list">
+                                                                <li>
+                                                                    <div class="md-list-content">
+                                                                        <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">From</span>
+                                                                        <span class="md-list-heading uk-text-large uk-text-success font-weight-200">25/11/2015</span>
+                                                                    </div>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="md-card-content border-content-border">
+                                                            <ul class="md-list">
+                                                                <li>
+                                                                    <div class="md-list-content">
+                                                                        <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">To</span>
+                                                                        <span class="md-list-heading uk-text-large uk-text-success font-weight-200">25/12/2015</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="md-card-content border-content-border">
+                                                            <ul class="md-list">
+                                                                <li>
+                                                                    <div class="md-list-content">
+                                                                        <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Status</span>
+                                                                        <span class="md-list-heading uk-text-large uk-text-success font-weight-200">Waiting</span>
+                                                                    </div>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="md-card-content border-content-border">
+                                                            <ul class="md-list">
+                                                                <li>
+                                                                    <div class="md-list-content">
+                                                                        <span class="uk-text-small uk-text-muted uk-display-block font-weight-500">Priority</span>
+                                                                        <span class="md-list-heading uk-text-large uk-text-primary font-weight-200">Low</span>
+                                                                    </div>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="tab-pane">
                                                 <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12 uk-margin-top">

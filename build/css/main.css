@@ -687,10 +687,25 @@ table::-webkit-scrollbar-thumb
 }
 .period{
     letter-spacing: 1px;
-    font-size:18px;
-    font-weight:700;
+    font-size:19px;
+    font-weight:800;
     margin-left:2px;
 }
 .scroll-box{
     overflow-x: scroll !important;
+}
+.remove-class1{
+    position: absolute;
+    left:25%;
+}
+#goal_no{
+    position: relative;
+    right: 27%;
+}
+.md-list .uk-nestable-list>li>.md-list-content, .md-list>li>.md-list-content {
+    overflow:visible!important;
+}
+.goal-icon-mobile{
+    position: absolute !important;
+    right:-91% !important;
 }
