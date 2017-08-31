@@ -709,3 +709,9 @@ table::-webkit-scrollbar-thumb
     position: absolute !important;
     right:-91% !important;
 }
+.margin-top-6per{
+    margin-top:6% !important;
+}
+#goal-list-view li{
+    margin-left:43px;
+}

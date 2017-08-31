@@ -70,7 +70,7 @@ $(document).ready(function(){
     if($(window).width() < 767){
         $('#companysettings-second-col').addClass('col-sm-offset-2').addClass('col-xs-offset-2');
     }else{
-        //
+        
     } 
 });
 
@@ -451,3 +451,29 @@ altair_chat = {
 
     }
 };
+
+function goal_toggle_list(){
+    //var flag = 0;
+    console.log('Want to show the list!');
+    
+    $(".goal-desktop-grid-view").addClass('display-none');
+    
+    $('#goal-view-list').addClass('display-none');
+    
+    $('#goal-view-grid').removeClass('display-none');
+    
+     $(".goal-desktop-list-view").removeClass('display-none');
+}
+
+function goal_toggle_grid(){
+    console.log('Want to get the grid!');
+    
+    $(".goal-desktop-grid-view").removeClass('display-none');
+    
+    $('#goal-view-list').removeClass('display-none');
+    
+    $('#goal-view-grid').addClass('display-none');
+    
+     $(".goal-desktop-list-view").addClass('display-none');
+}
+
