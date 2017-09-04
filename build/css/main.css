@@ -725,10 +725,13 @@ table::-webkit-scrollbar-thumb
     left: 37px;
 }
 #nav_adjust_mobile{
-    width: 35%;
+    width: 36%;
     text-align: center;
     border-bottom:0;
 }
 #nav_adjust_mobile li a{
     border-bottom-color: transparent;
+}
+.more-padding-adjust li{
+    margin-top:4.5%;
 }
