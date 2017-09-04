@@ -164,7 +164,7 @@
                                     <div class="md-card-content">
                                         <center class="col-sm-12">
 
-                                            <ul class="uk-tab" data-uk-tab="{connect:'#tabs_anim1', animation:'scale'}">
+                                            <ul class="uk-tab" id="nav_adjust_mobile" data-uk-tab="{connect:'#tabs_anim1', animation:'scale'}">
                                                 <li class="uk-active"><a href="#">About</a></li>
                                                 <li><a href="#">Details</a></li>
                                                 <li><a href="#">Work Experience</a></li>
@@ -178,6 +178,7 @@
                                                 <li><a href="#">Exit Details</a></li>
 
                                             </ul>
+                                            <hr />
                                             <ul id="tabs_anim1" class="uk-switcher uk-margin">
                                                 <li><div class="col-sm-12 col-xs-12 col-md-12 col-sm-12 uk-margin-top">
                                                     <div class="uk-display-inline-block pull-right" id="profile-modal" data-toggle="modal" data-target="#myModal20" data-uk-dropdown="{pos:'left-top'}">
@@ -498,12 +499,39 @@
 
                                                 <li>
                                                     <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
-                                                        <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal30" id="profile-modal">
-                                                            <a class="md-fab md-fab-success btn-mini md-fab-wave-light" href="javascript:void(0)"><i class="material-icons font-size-18">add</i></a>
-                                                        </div>
+                                                        <ul class="inline-block1 pull-right" id="goal-list-view">
+                                                            <li>
+                                                                <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal30" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
+                                                                    <a class="md-fab md-fab-success btn-mini md-fab-wave-light" href="javascript:void(0)"><i class="material-icons font-size-18">add</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <!--Add button-->
+                                                            <!--list to show btn-->
+                                                            <li id="goal-view-list" onclick="goal_toggle_list()">
+                                                                <div class="uk-display-inline-block pull-right goal-list-btn" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
+                                                                    <a class="md-fab md-fab-primary btn-mini md-fab-wave-light" href="javascript:void(0)"><i class="mdi mdi-view-list font-size-14"></i></a>
+                                                                </div>
+                                                            </li>
+                                                            <!--grid to show btn-->
+                                                            <li class="display-none" id="goal-view-grid" onclick="goal_toggle_grid()">
+                                                                <div class="uk-display-inline-block pull-right goal-grid-btn"  id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
+                                                                    <a class="md-fab md-fab-primary btn-mini md-fab-wave-light" href="javascript:void(0)"><i class="mdi mdi-view-grid font-size-14"></i></a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <span class="pull-left">
+                                                            <select id="select_demo_1" class="md-input">
+                                                                <option value="" class="uk-text-muted font-size-13" disabled selected hidden>Filter By Year</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="2017">2017</option>
+                                                            </select>
+                                                        </span>
+                                                        <span class="clearfix"></span>
+
                                                     </div>
                                                     <br /><br /><br />
-                                                    <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12 margin-bottom-1 ">
+                                                    <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12 margin-bottom-1 margin-top-6per goal-desktop-grid-view">
                                                         <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
                                                             <div class="pull-right goal-icon-mobile" data-toggle="modal" data-target="#myModal29" id="profile-modal">
                                                                 <i  class="md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
@@ -603,6 +631,95 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <!--List mobile view -->
+                                                    <div class="md-card margin-bottom-1 margin-top-6per display-none goal-desktop-list-view col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin-top:6% !important;">
+                                                        <div class="md-card-content">
+                                                            <div class="uk-overflow-container uk-margin-bottom">
+                                                                <table class="uk-table uk-table-align-vertical uk-table-nowrap tablesorter tablesorter-altair" id="ts_issues">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="uk-text-center">Goal Title</th>
+                                                                            <th>Goal Type</th>
+                                                                            <th>Description</th>
+                                                                            <th>From</th>
+                                                                            <th>To</th>
+                                                                            <th>Status</th>
+                                                                            <th>Priority</th>
+                                                                            <th>Operations</th>
+                                                                        </tr>
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="uk-text-center"><span class="uk-text-small uk-text-muted uk-text-nowrap"><p>Development</p></span></td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap">
+                                                                                Common
+                                                                            </td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap"> <div class="uk-button-dropdown" data-uk-dropdown="{mode:'hover' , pos : 'right-top'}" style="left:-17%;">
+                                                                                <i class="job-desc-icon md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
+                                                                                <div class="uk-dropdown">
+                                                                                    <ul class="uk-nav uk-nav-dropdown padding-2 padding-left-4">
+                                                                                        <p class="uk-text-muted font-size-12">Analytics Work</p>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                </div></td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap">20/Jun/16</td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap">14/Jun/16</td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap"><span class="uk-badge uk-badge-success uk-text-upper">Approved</span></td>
+                                                                            <td class="center"><span class="uk-badge uk-badge-danger uk-text-upper">High</span></td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap"><div style="left:-28.5%;" class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal29" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
+                                                                                <i class="md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
+                                                                                </div></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="uk-text-center"><span class="uk-text-small uk-text-muted uk-text-nowrap"><p>Work Progress</p></span></td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap">
+                                                                                Hr post
+                                                                            </td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap"><div class="uk-button-dropdown" data-uk-dropdown="{mode:'hover' , pos : 'right-top'}" style="left:-17%;">
+                                                                                <i class="job-desc-icon md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
+                                                                                <div class="uk-dropdown">
+                                                                                    <ul class="uk-nav uk-nav-dropdown padding-2 padding-left-4">
+                                                                                        <p class="uk-text-muted font-size-12">Analytics Work</p>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                </div></td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap">20/Jun/16</td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap">14/Jun/16</td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap"><span class="uk-badge uk-badge-success uk-text-upper">Approved</span></td>
+                                                                            <td class="center"><span class="uk-badge uk-badge-danger uk-text-upper">High</span></td>
+                                                                            <td class="center uk-text-small uk-text-muted uk-text-nowrap"><div style="left:-28.5%;" class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal29" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
+                                                                                <i class="md-icon material-icons md-icon-light uk-text-muted">&#xE5D4;</i>
+                                                                                </div></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <ul class="uk-pagination ts_pager">
+                                                                <li data-uk-tooltip title="Select Page">
+                                                                    <select class="ts_gotoPage ts_selectize"></select>
+                                                                </li>
+                                                                <li class="first"><a href="javascript:void(0)"><i class="uk-icon-angle-double-left"></i></a></li>
+                                                                <li class="prev"><a href="javascript:void(0)"><i class="uk-icon-angle-left"></i></a></li>
+                                                                <li><span class="pagedisplay"></span></li>
+                                                                <li class="next"><a href="javascript:void(0)"><i class="uk-icon-angle-right"></i></a></li>
+                                                                <li class="last"><a href="javascript:void(0)"><i class="uk-icon-angle-double-right"></i></a></li>
+                                                                <li data-uk-tooltip title="Page Size">
+                                                                    <select class="pagesize ts_selectize">
+                                                                        <option value="3">3</option>
+                                                                        <option value="5">5</option>
+                                                                        <option value="10" selected>10</option>
+                                                                        <option value="25">25</option>
+                                                                        <option value="50">50</option>
+                                                                        <option value="all">all</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+
                                                 </li>
                                                 <li>
                                                     <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12 uk-margin-top">
@@ -1349,19 +1466,16 @@
                                                         </li>
                                                     </ul>
                                                     <span class="pull-left">
-<!--
-                                                        <select id="select_demo_5" data-md-selectize data-md-selectize-bottom data-uk-tooltip="{pos:'top'}" title="Select the year">
-                                                            <option value="">Select year goals</option>
-                                                            <option value="a">2015</option>
-                                                            <option value="b">2016</option>
-                                                            <option value="c">2017 </option>
+                                                        <select id="select_demo_1" class="md-input">
+                                                            <option value="" class="uk-text-muted font-size-13" disabled selected hidden>Filter By Year</option>
+                                                            <option value="2015">2015</option>
+                                                            <option value="2016">2016</option>
+                                                            <option value="2017">2017</option>
                                                         </select>
--->
-
                                                     </span>
                                                     <span class="clearfix"></span>
                                                 </div>
-                                                <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12  md-card margin-bottom-1 margin-top-6per goal-desktop-grid-view">
+                                                <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12  md-card margin-bottom-1 margin-top-1  goal-desktop-grid-view">
                                                     <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
                                                         <br/>
                                                         <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal29" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
@@ -1375,7 +1489,6 @@
                                                         </div>
                                                         <span class="clearfix"></span>
                                                     </div>
-
                                                     <div class="col-sm-6">
                                                         <div class="md-card-content border-content-border">
                                                             <ul class="md-list">
@@ -1466,7 +1579,7 @@
                                                     </div>
                                                 </div>
                                                 <!--Second card card-->
-                                                <div  class="col-sm-12 col-xs-12 col-md-12 col-sm-12  md-card margin-bottom-1 goal-desktop-grid-view">
+                                                <div  class="col-sm-12 col-xs-12 col-md-12 col-sm-12  md-card margin-bottom-1 goal-desktop-grid-view margin-top-1">
                                                     <div class="col-sm-12 col-xs-12 col-md-12 col-sm-12">
                                                         <br/>
                                                         <div class="uk-display-inline-block pull-right" data-toggle="modal" data-target="#myModal29" id="profile-modal" data-uk-dropdown="{pos:'left-top'}">
@@ -2033,33 +2146,27 @@
                     <div class="modal-body" >
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="md-card uk-accordion uk-accordion-alt hierarchical_slide help_accordion" data-slide-children="h3" data-slide-context=".md-card-content">
-                                    <h3 class="uk-accordion-title uk-text-muted">Goal Details</h3>
-                                    <div class="uk-accordion-content">
-
-                                        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12 col-md-6">
-                                            <div class="uk-input-group">
-                                                <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-tooltip-outline-plus login-icon-font-size"></i></span>
-                                                <label class="uk-text-small uk-text-muted">Goal Title</label>
-                                                <input type="text" class="md-input" />
-                                            </div>
-                                            <br /> 
-                                        </div>
-                                        <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12 col-md-6">
-                                            <div class="uk-input-group">
-                                                <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-language-typescript login-icon-font-size"></i></span>
-                                                <label class="uk-text-small uk-text-muted">Goal Type</label>
-                                                <input type="text" class="md-input" />
-                                            </div>
-                                            <br />
-                                        </div>
-                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                                            <div class="uk-input-group">
-                                                <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-message-outline login-icon-font-size"></i></span>
-                                                <label for="message" class="uk-text-small">Goal Description</label>
-                                                <textarea class="md-input uk-text-muted" name="message" cols="10" rows="2" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-validation-threshold="10" data-parsley-minlength-message = "Come on! You need to enter at least a 20 caracters long comment.."></textarea>
-                                            </div>
-                                        </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12 col-md-6">
+                                    <div class="uk-input-group">
+                                        <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-tooltip-outline-plus login-icon-font-size"></i></span>
+                                        <label class="uk-text-small uk-text-muted">Goal Title</label>
+                                        <input type="text" class="md-input" />
+                                    </div>
+                                    <br /> 
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 col-xs-12 col-md-6">
+                                    <div class="uk-input-group">
+                                        <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-language-typescript login-icon-font-size"></i></span>
+                                        <label class="uk-text-small uk-text-muted">Goal Type</label>
+                                        <input type="text" class="md-input" />
+                                    </div>
+                                    <br />
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                                    <div class="uk-input-group">
+                                        <span class="uk-input-group-addon"><i class="light-black icon-color mdi mdi-message-outline login-icon-font-size"></i></span>
+                                        <label for="message" class="uk-text-small">Goal Description</label>
+                                        <textarea class="md-input uk-text-muted" name="message" cols="10" rows="2" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-validation-threshold="10" data-parsley-minlength-message = "Come on! You need to enter at least a 20 caracters long comment.."></textarea>
                                     </div>
                                 </div>
                             </div>

@@ -713,5 +713,22 @@ table::-webkit-scrollbar-thumb
     margin-top:6% !important;
 }
 #goal-list-view li{
-    margin-left:43px ;
+    margin-left:43px;
+}
+#select_demo_1{
+    width:200px;
+    margin-top:15px;
+}
+
+#goal-list-view{
+    position: relative;
+    left: 37px;
+}
+#nav_adjust_mobile{
+    width: 35%;
+    text-align: center;
+    border-bottom:0;
+}
+#nav_adjust_mobile li a{
+    border-bottom-color: transparent;
 }

@@ -47,3 +47,17 @@
         display:none;
     }
 }
+
+@media all and (max-width : 767px){
+    #goal-list-view{
+        position: relative;
+        left: 10px;
+    }
+    #goal-list-view li{
+        margin-left:10px;
+    }
+    #select_demo_1{
+        width:254px;
+        margin-top:15px;
+    }
+}
