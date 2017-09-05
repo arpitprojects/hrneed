@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "cropperjs": "^1.0.0",
+    "croppie": "^2.5.0",
     "dragula": "^3.7.2",
     "handlebars": "^4.0.10",
     "izimodal": "^1.5.0",

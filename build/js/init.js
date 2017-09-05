@@ -70,7 +70,7 @@ $(document).ready(function(){
     if($(window).width() < 767){
         $('#companysettings-second-col').addClass('col-sm-offset-2').addClass('col-xs-offset-2');
     }else{
-        
+
     } 
 });
 
@@ -455,25 +455,56 @@ altair_chat = {
 function goal_toggle_list(){
     //var flag = 0;
     console.log('Want to show the list!');
-    
+
     $(".goal-desktop-grid-view").addClass('display-none');
-    
+
     $('#goal-view-list').addClass('display-none');
-    
+
     $('#goal-view-grid').removeClass('display-none');
-    
-     $(".goal-desktop-list-view").removeClass('display-none');
+
+    $(".goal-desktop-list-view").removeClass('display-none');
 }
 
 function goal_toggle_grid(){
     console.log('Want to get the grid!');
-    
+
     $(".goal-desktop-grid-view").removeClass('display-none');
-    
+
     $('#goal-view-list').removeClass('display-none');
-    
+
     $('#goal-view-grid').addClass('display-none');
-    
-     $(".goal-desktop-list-view").addClass('display-none');
+
+    $(".goal-desktop-list-view").addClass('display-none');
 }
 
+var el = document.getElementById('vanilla-demo');
+
+var vanilla = new Croppie(el, {
+    viewport: { width: 100, height: 100 },
+    boundary: { width: 300, height: 300 },
+    showZoomer: false,
+    enableOrientation: true
+});
+
+vanilla.bind({
+    url: '../build/img/m_logo.png',
+    orientation: 4
+});
+
+//on button click
+
+function jobs_grid_view(){
+    $('.jobs_list_btn').removeClass('display-none');
+    $('.jobs_grid_btn').addClass('display-none');
+    $('.jobs_list_view_container').addClass('display-none');
+     $('.jobs_grid_view_container').removeClass('display-none');
+    
+    
+}
+function jobs_list_view(){
+    $('.jobs_list_btn').addClass('display-none');
+    $('.jobs_grid_btn').removeClass('display-none');
+    $('.jobs_list_view_container').removeClass('display-none');
+     $('.jobs_grid_view_container').addClass('display-none');
+    
+}
