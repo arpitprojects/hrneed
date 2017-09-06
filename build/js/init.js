@@ -22,6 +22,8 @@ $(function() {
     altair_form_file_upload.init();
 });
 
+
+
 altair_form_file_upload = {
     init: function() {
 
@@ -497,14 +499,17 @@ function jobs_grid_view(){
     $('.jobs_list_btn').removeClass('display-none');
     $('.jobs_grid_btn').addClass('display-none');
     $('.jobs_list_view_container').addClass('display-none');
-     $('.jobs_grid_view_container').removeClass('display-none');
-    
-    
+    $('.jobs_grid_view_container').removeClass('display-none');
+
+
 }
 function jobs_list_view(){
     $('.jobs_list_btn').addClass('display-none');
     $('.jobs_grid_btn').removeClass('display-none');
     $('.jobs_list_view_container').removeClass('display-none');
-     $('.jobs_grid_view_container').addClass('display-none');
-    
+    $('.jobs_grid_view_container').addClass('display-none');
+
 }
+
+
+

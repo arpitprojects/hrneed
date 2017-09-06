@@ -5,7 +5,7 @@ body,html{
 
 } 
 .font-family{
-       font-family: 'Roboto' ,'Lato' , sans-serif !important; 
+    font-family: 'Roboto' ,'Lato' , sans-serif !important; 
 }
 body{
     overflow-y: hidden;
@@ -561,7 +561,7 @@ font-size-15{
 
 .tabs .active {
     border-bottom: 2px solid #2196f3;
-    
+
 }
 
 .tab-panes .tab-pane{
@@ -597,7 +597,7 @@ margin-bottom: 2px
 #more-btn-profile{
     color:#333 !important;
     margin-left:29%;
-    
+
 }
 .table-profile-non-responsive tbody tr td{
     vertical-align: middle;
@@ -616,23 +616,23 @@ margin-bottom: 2px
 }
 table::-webkit-scrollbar
 {
-	-webkit-appearance: none;
-	width: 14px;
-	height: 14px;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
 }
 
 table::-webkit-scrollbar-thumb
 {
-	border-radius: 8px;
-	border: 3px solid #fff;
-	background-color: rgba(0, 0, 0, .3);
+    border-radius: 8px;
+    border: 3px solid #fff;
+    background-color: rgba(0, 0, 0, .3);
 }
 .job-desc-icon{
     position: relative;
     left: 19px;
 }
 .ul-work-adjust li{
-   margin-left:16%;
+    margin-left:16%;
 }
 .ul-work-adjust{
     position:relative;
@@ -679,7 +679,7 @@ table::-webkit-scrollbar-thumb
 }
 #uk-nav li{
     margin-bottom: 2%;
-    
+
 }
 .row-reset{
     margin-right:0 !important;
@@ -791,4 +791,36 @@ table::-webkit-scrollbar-thumb
 }
 #left-desc-hover{
     width:200px !important;
+}
+.irs-shadow{
+    background:#727272;
+    height:1px;
+}
+.irs-bar{
+    height:1px;
+    background: #727272;
+}
+.irs-slider{
+    background:#727272
+}
+.irs-slider:hover{
+    background: #727272
+}
+.irs-from, .irs-single, .irs-to{
+    background: #727272
+}
+.irs-from:after, .irs-single:after, .irs-to:after{
+    background: #727272
+}
+.irs-from:after, .irs-single:after, .irs-to:after{
+    background: #727272
+}
+.irs-from:after, .irs-single:after, .irs-to:after{
+    border-top-color:#727272;
+}
+.uk-table tfoot td, .uk-table tfoot th, .uk-table thead th{
+    font-size:12px;
+}
+.margin-right-13{
+    margin-right:13px;
 }
