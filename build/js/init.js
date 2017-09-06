@@ -510,6 +510,22 @@ function jobs_list_view(){
     $('.jobs_grid_view_container').addClass('display-none');
 
 }
+/*Optional function*/
 
+function viewResume(){
+    PDFObject.embed("../../demo/pdf.pdf");
+}
 
+setTimeout(function(){
+    Push.create("Hello world!", {
+        body: "How's it hangin'?",
+        icon: 'icon.png',
+        timeout: 4000,
+        onClick: function () {
+            window.focus();
+            this.close();
+        }
+    });
+} , 2000);
 
+/*End of the optional function */

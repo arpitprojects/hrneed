@@ -335,6 +335,9 @@ button#icon-btn1{
 .margin-left-5{
     margin-left:5%
 }
+.margin-left-7{
+    margin-left:5%
+}
 .inline-block2 li{
     margin-left: 1%;
     display: inline-block;
@@ -774,8 +777,14 @@ table::-webkit-scrollbar-thumb
 .margin-top-3{
     margin-top:3%;
 }
+.margin-top-5{
+    margin-top:5%;
+}
 .margin-left-2{
     margin-left:2%;
+}
+.margin-left-6{
+    margin-left:6%;
 }
 .aleft{
     text-align:left !important;
@@ -823,4 +832,29 @@ table::-webkit-scrollbar-thumb
 }
 .margin-right-13{
     margin-right:13px;
+}
+.lowercase{
+    text-transform: lowercase;
+}
+
+.selectize-control.single .selectize-input input {
+    font-size: 13px;
+    top: 8px;
+}
+.transparent{
+    background: transparent;
+}
+.border-none{
+    border:none;
+}
+.input-exp-width{
+    width:96px !important;
+}
+.margin-left-15{
+    margin-left:15%;
+}
+.uk-file-upload{
+    padding:16px 8px !important;
+    width: 96%;
+    margin-left: 4%;
 }
