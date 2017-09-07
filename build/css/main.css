@@ -499,7 +499,7 @@ font-size-15{
     border-left:1px solid #eee;
 }
 .margin-top-1{
-    margin-top:1%;
+    margin-top:1% !important;
 }
 .letter-spacing-0{
     letter-spacing: 0.5px;

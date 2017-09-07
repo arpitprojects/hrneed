@@ -19,7 +19,6 @@
         <!--Link favicon used form ipl site-->
         <link rel="shortcut icon" href="" type="image/x-icon">
         <!--All icons-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
         <link href="assests/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
@@ -33,76 +32,137 @@
         <link rel="stylesheet" href="assests/css/style_switcher.min.css" media="all"/>
         <link rel="stylesheet" href="assests/css/main.min.css" media="all"/>
         <link rel="stylesheet" href="assests/css/themes_combined.min.css" media="all"/>
+        <link rel="stylesheet" href="assests/css/modal.css" media="all"/>
+        <link rel="stylesheet" href="assests/css/dropify.min.css" media="all"/>
         <!--End of All css-->
+        <!--Custom Css-->
         <link rel="stylesheet" href="build/css/init.css" media="all"/>
         <link rel="stylesheet" href="build/css/grid.css" media="all"/>
         <link rel="stylesheet" href="build/css/main.css" media="all"/>
-        <!-- All Js-->
-
-
-        <!--End of All Js-->
-
+        <link rel="stylesheet" href="build/css/media_queries.css" media="all"/>
+        <!--End of the custom css-->
     </head>
-    <body>
-        <br/><br/><br />
-        <section id="login">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1  col-lg-3 col-md-3 col-xs-10 col-xs-offset-1 col-md-offset-8 col-lg-offset-8  md-card" id="card">
-                        <br />
-                        <center>
-                            <img src="build/img/m_logo.png" alt="Material logo" id="m-logo" class="img-responsive" />
-                            <br /><br />
-                            <p id="login-logo-text">login page </p>
-                            <br /><br />
-                        </center>
-                        <form>
-                            <div class="uk-form-row">
+    <body id="body" class="sidebar_main_open sidebar_main_swipe" style="overflow:scroll;" ng-app="hr">
+        <!-- main header -->
+        <!--Preloader-->
 
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black mdi mdi-account-outline login-icon-font-size"></i></span>
-                                    <label>Username</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                            </div>
-                            <div class="uk-form-row">
-                                <div class="uk-input-group">
-                                    <span class="uk-input-group-addon"><i class="light-black mdi mdi-lock-outline login-icon-font-size"></i></span>
-                                    <label>Password</label>
-                                    <input type="text" class="md-input" />
-                                </div>
-                            </div>
-                            <br />
-                             <p id="check-box-login-page">
-                                <input type="checkbox" name="checkbox_demo_mercury" id="checkbox_demo_1" data-md-icheck />
-                                <label for="checkbox_demo_1" class="inline-label light-grey adjust-check-box">Remember Me</label>
-                            </p>
-                           
-                            <div class="uk-margin-medium-top">
-                                <a href="javascript:void(0)" class="login-btn-pink md-btn md-btn-primary md-btn-wave-light md-btn-block">Sign In</a>
-                            </div>
-                            <br/>
-                           <br /><br />
-                            <div id="login-last-text">
-                                <p class="pull-left">
-                                    <a href="javascript:void(0)" class="login-page-a">Register Now</a>
-                                </p>
-                                <p class="pull-right">
-                                    <a href="javascript:void(0)" class="login-page-a">Forgot Password?</a>
-                                </p>
-                                <span class="clearfix"></span>
-                            </div>
-                        </form>
-                        <br /><br />
-                    </div>
-                </div>
+        <!--End of the preloader markup-->
+        <header id="header_main">
+            <div class="header_main_content">
+                <nav class="uk-navbar">
+
+                    <!-- main sidebar switch -->
+                    <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
+                        <span class="sSwitchIcon"></span>
+                    </a>
+                    <!-- secondary sidebar switch -->
+                    <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
+                        <span class="sSwitchIcon"></span>
+                    </a> 
+                    <button class="pull-right md-wave" type="button" id="icon-btn1" data-toggle="modal" data-target="#myModal2">
+                        <i class="mdi mdi-24px mdi-help-circle-outline color-white"></i>
+                    </button>
+                </nav>
             </div>
-        </section>
-        <script src="assests/js/common.min.js"></script>
+            <div class="header_main_search_form">
+                <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+                <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
+                    <input type="text" class="header_main_search_input" />
+                    <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
+                    <script type="text/autocomplete">
+                        <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                            {{~items}}
+                            <li data-value="{{ $item.value }}">
+                                <a href="{{ $item.url }}" class="needsclick">
+                                    {{ $item.value }}<br>
+                                    <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                        </a>
+                        </li>
+                            {{/items}}
+                        </ul>
+                    </script>
+                </form>
+            </div>
+        </header><!-- main header end -->
+        <!-- main sidebar -->
+        <aside id="sidebar_main">
+
+            <div class="sidebar_main_header">
+                <!--some element deleted by me-->
+                <center>
+                    <img src="build/img/m_logo.png" id="logo-adjust" alt="logo" height="60" width="60" class="circle-ele"  />
+                </center>
+            </div>
+
+            <div class="menu_section">
+                <ul>
+                    <li title="Organisation">
+                        <a href="javascript:void(0)">
+                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
+                            <span class="menu_title">Organisation</span>
+                        </a>
+                        <ul>
+                            <li><a ui-sref="admin/organisation/companysettings" class="side-btn">Company Profile</a></li>
+                            <li><a href="javascript:void(0)">Departments</a></li>
+                            <li><a href="javascript:void(0)">Designations</a></li>
+                            <li><a href="javascript:void(0)">Locations</a></li>
+                            <li><a href="javascript:void(0)">Groups</a></li>
+                            <li><a href="javascript:void(0)">Domains</a></li>
+                            <li><a href="javascript:void(0)">Rebranding</a></li>
+                            <li><a href="javascript:void(0)">Pay period Settings</a></li>
+                            <li><a href="javascript:void(0)">Hoilday Calender</a></li>
+                        </ul>
+
+                    </li>
+                    <li title="Employee">
+                        <a href="javascript:void(0)">
+                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
+                            <span class="menu_title">Employee</span>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)" class="side-btn">Employee List</a></li>
+                            <li><a href="javascript:void(0)">Employee Profiles</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+            
+        <ng-view></ng-view>
+        <script src="assests/js/common.js"></script>
         <script src="assests/js/uikit_custom.min.js"></script>
-        <script src="assests/js/altair_admin_common.min.js"></script>
+        <script src="assests/js/altair_admin_common.js"></script>
+        <script src="assests/js/modal.js"></script>
+        <script src="assests/js/dropify.min.js"></script>
+        <script src="assests/js/perfect-scrollbar.min.js"></script>
+        <script src="assests/js/dragula.min.js"></script>
+        <script src="assests/js/jquery.tablesorter.min.js"></script>
+        <script src="assests/js/widget-alignChar.min.js"></script>
+        <script src="assests/js/jquery.tablesorter.widgets.min.js"></script>
+        <script src="assests/js/jquery.tablesorter.pager.min.js"></script>
+        <script src="assests/js/jquery.inputmask.bundle.js"></script>
+        <script src="assests/js/handlebars.min.js"></script>
+        <script src="assests/js/handlebars_helpers.min.js"></script>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-route/angular-route.min.js"></script>
+        <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="node_modules/angular-cookie/angular-cookie.min.js"></script>
+        <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+        <script src="app/module.js"></script>
+        <script src="app/controller.js"></script>
+        <script src="app/route.js"></script>
+        <script src="app/services.js"></script>
+        <script src="app/directives.js"></script>
+        <script src="app/factory.js"></script>
+        <script src="build/js/ajax.js"></script>
         <script src="build/js/init.js"></script>
         <script src="build/js/build.js"></script>
-        <script src="build/js/script.js"></script>
+        <script>
+            // load parsley config (altair_admin_common.js)
+            altair_forms.parsley_validation_config();
+            
+        </script>
+
     </body>
 </html>
