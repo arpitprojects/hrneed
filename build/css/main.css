@@ -664,9 +664,10 @@ table::-webkit-scrollbar-thumb
     padding-top:0 !important;
 }
 .chat_box_wrapper{
-    height:375px;
+    height:466px;
     border: 1px solid rgba(0,0,0,.12);
     background-color:#eee;
+    margin-top: -15px;
 }
 .font-size-10{
     font-size:10.5px !important;
@@ -836,11 +837,6 @@ table::-webkit-scrollbar-thumb
 .lowercase{
     text-transform: lowercase;
 }
-
-.selectize-control.single .selectize-input input {
-    font-size: 13px;
-    top: 8px;
-}
 .transparent{
     background: transparent;
 }
@@ -857,4 +853,54 @@ table::-webkit-scrollbar-thumb
     padding:16px 8px !important;
     width: 96%;
     margin-left: 4%;
+}
+.textarea-max-height{
+    max-height:100px !important;
+}
+.dropify-wrapper {
+    max-width: 86%;
+    height: 130px;
+    margin-left: 7.5%;
+}
+#custom-modal-100{
+    width:78.5%;
+}
+.normal-border-right{
+    border-right:1px solid #eeecea;
+}
+.margin-right-20{
+    margin-right:20px;
+}
+.scrum_board_overflow{
+    background:transparent;
+}
+#scrum_board .scrum_column_heading{
+    background: transparent;
+}
+.margin-bottom-5{
+    margin-bottom:5px;
+}
+.margin-left-1{
+    margin-left:1%;
+}
+.uk-htmleditor-preview{
+    height:300px !important;
+}
+.CodeMirror.cm-s-default.CodeMirror-wrap{
+    height:300px !important;   
+}
+.uk-htmleditor-code{
+    height:300px !important;
+}
+.uk-htmleditor-content{
+    height:302px !important;
+}
+.uk-htmleditor{
+    height:300px!important;
+}
+a .uk-icon-expand{
+    display:none;
+}
+.formal-box-shadow{
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
 }

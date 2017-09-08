@@ -512,8 +512,13 @@ function jobs_list_view(){
 }
 /*Optional function*/
 
-function viewResume(){
-    PDFObject.embed("../../demo/pdf.pdf");
+function viewResume(){              PDFObject.embed("../../demo/pdf.pdf");
+
+                     }
+if(PDFObject.supportsPDFs){
+    console.log("Yay, this browser supports inline PDFs.");
+} else {
+    console.log("Boo, inline PDFs are not supported by this browser");
 }
 
 $(function() {
@@ -529,7 +534,7 @@ altair_scrum_board = {
             childWidth = $scrumBoard.children('div').width(),
             childsCount = $scrumBoard.children('div').length;
 
-            $scrumBoard.width(childWidth * childsCount);
+        $scrumBoard.width(childWidth * childsCount);
     },
     draggable_tasks: function() {
 
@@ -551,4 +556,6 @@ altair_scrum_board = {
     }
 };
 
-/*End of the optional function */
+$(document).ready(function(){
+   $('a[data-htmleditor-button="fullscreen"]').addClass('display-none');  
+});
