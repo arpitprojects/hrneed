@@ -47,86 +47,7 @@
         <!--Preloader-->
 
         <!--End of the preloader markup-->
-        <header id="header_main">
-            <div class="header_main_content">
-                <nav class="uk-navbar">
-
-                    <!-- main sidebar switch -->
-                    <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
-                        <span class="sSwitchIcon"></span>
-                    </a>
-                    <!-- secondary sidebar switch -->
-                    <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
-                        <span class="sSwitchIcon"></span>
-                    </a> 
-                    <button class="pull-right md-wave" type="button" id="icon-btn1" data-toggle="modal" data-target="#myModal2">
-                        <i class="mdi mdi-24px mdi-help-circle-outline color-white"></i>
-                    </button>
-                </nav>
-            </div>
-            <div class="header_main_search_form">
-                <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
-                <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
-                    <input type="text" class="header_main_search_input" />
-                    <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
-                    <script type="text/autocomplete">
-                        <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
-                            {{~items}}
-                            <li data-value="{{ $item.value }}">
-                                <a href="{{ $item.url }}" class="needsclick">
-                                    {{ $item.value }}<br>
-                                    <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
-                        </a>
-                        </li>
-                            {{/items}}
-                        </ul>
-                    </script>
-                </form>
-            </div>
-        </header><!-- main header end -->
-        <!-- main sidebar -->
-        <aside id="sidebar_main">
-
-            <div class="sidebar_main_header">
-                <!--some element deleted by me-->
-                <center>
-                    <img src="../../build/img/m_logo.png" id="logo-adjust" alt="logo" height="60" width="60" class="circle-ele"  />
-                </center>
-            </div>
-
-            <div class="menu_section">
-                <ul>
-                    <li title="Organisation">
-                        <a href="javascript:void(0)">
-                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
-                            <span class="menu_title">Organisation</span>
-                        </a>
-                        <ul>
-                            <li><a href="javascript:void(0)" onclick="companysettings()" class="side-btn">Company Profile</a></li>
-                            <li><a href="javascript:void(0)" onclick="departments()">Departments</a></li>
-                            <li><a href="javascript:void(0)">Designations</a></li>
-                            <li><a href="javascript:void(0)">Locations</a></li>
-                            <li><a href="javascript:void(0)">Groups</a></li>
-                            <li><a href="javascript:void(0)">Domains</a></li>
-                            <li><a href="javascript:void(0)">Rebranding</a></li>
-                            <li><a href="javascript:void(0)">Pay period Settings</a></li>
-                            <li><a href="javascript:void(0)">Hoilday Calender</a></li>
-                        </ul>
-
-                    </li>
-                    <li title="Employee">
-                        <a href="javascript:void(0)">
-                            <span class="menu_icon"><i class="material-icons">&#xE1BD;</i></span>
-                            <span class="menu_title">Employee</span>
-                        </a>
-                        <ul>
-                            <li><a href="javascript:void(0)" class="side-btn">Employee List</a></li>
-                            <li><a href="javascript:void(0)">Employee Profiles</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </aside>
+      
         <br /><br /><br/ ><br /> 
         <div class="container for_scroll">
             <div class="row for_scroll">
@@ -150,7 +71,7 @@
                                     </center>
                                 </div>
                                 <div class="md-card-content">
-                                    <br /><br /><br /><br /><br /><br />
+                                 
                                     <ul class="md-list md-list-addon">
                                         <li>
                                             <div class="md-list-addon-element">
@@ -206,12 +127,11 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <hr />
+                                   
                                 </div>
 
                             </div>
                         </div>
-                        <br />
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-5 col-lg-5 overflow-auto" id="companysettings-second-col">
 
@@ -220,7 +140,6 @@
                         </div>
 
                         <ul class="md-list">
-                            <br /><br /><br /><br />
                             <li>
                                 <div class="md-list-content">
                                     <span class="md-list-heading padding-bottom-6px">Super Administrator</span>
@@ -283,19 +202,7 @@
                                     <br/> 
                                 </div>
                             </li>
-                            <li>
-                                <div class="md-list-content">
-                                    <span class="md-list-heading padding-bottom-6px">Chat settings</span>
-
-
-                                    <span class="pull-left uk-text-medium uk-text-muted"> Chat:</span><span class="text-margin-email uk-text-small">Enable</span>
-                                    <span class="clearfix"></span>
-                                    <br/> 
-                                    <hr/>
-                                </div>
-                            </li>
                         </ul>
-
                     </div>
                 </div>
             </div>
